@@ -1,0 +1,203 @@
+/* ── Podcast Stats Bar ── */
+.podcast-stats {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.1rem 1.75rem;
+  overflow: hidden;
+}
+
+.pod-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  flex: 1;
+  text-align: center;
+}
+
+.pod-stat-value {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+}
+.pod-stat-value--teal   { color: var(--teal); }
+.pod-stat-value--amber  { color: #f5a623; }
+.pod-stat-value--purple { color: #c084e8; }
+
+.pod-stat-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.pod-stat-divider {
+  width: 1px;
+  height: 36px;
+  background: var(--border);
+  flex-shrink: 0;
+  margin: 0 0.5rem;
+}
+
+/* ── Episode Number Input ── */
+.pod-ep-num { max-width: 120px; }
+
+.ep-num-wrap {
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(107,45,139,0.25);
+  border-radius: 9px;
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.ep-num-wrap:focus-within {
+  border-color: rgba(107,45,139,0.6);
+  box-shadow: 0 0 0 3px rgba(107,45,139,0.1);
+}
+
+.ep-num-prefix {
+  padding: 0.6rem 0.7rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--teal);
+  background: rgba(0,169,157,0.08);
+  border-right: 1px solid rgba(107,45,139,0.2);
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+
+.ep-num-input {
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  padding-left: 0.65rem !important;
+  width: 100%;
+  -moz-appearance: textfield;
+}
+.ep-num-input::-webkit-outer-spin-button,
+.ep-num-input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+
+/* ── Spotify URL Input ── */
+.spotify-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.spotify-icon {
+  position: absolute;
+  left: 0.85rem;
+  pointer-events: none;
+  flex-shrink: 0;
+}
+.spotify-url-input {
+  padding-left: 2.5rem !important;
+}
+.spotify-url-input:focus {
+  border-color: rgba(29,185,84,0.5) !important;
+  box-shadow: 0 0 0 3px rgba(29,185,84,0.08) !important;
+}
+
+/* ── Cover Upload (square) ── */
+.pod-cover-zone {
+  min-height: 180px;
+  aspect-ratio: 1 / 1;
+  max-width: 180px;
+}
+
+.pod-cover-preview {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+}
+.pod-cover-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* ── Table column widths ── */
+.col-ep      { width: 90px; }
+.col-title   { width: 28%; }
+.col-guest   { width: 22%; }
+.col-dur     { width: 100px; }
+.col-status  { width: 110px; }
+.col-actions { width: 120px; }
+
+/* ── Episode number cell ── */
+.td-ep-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(107,45,139,0.2), rgba(0,169,157,0.12));
+  border: 1px solid rgba(107,45,139,0.3);
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #c084e8;
+}
+
+/* ── Guest cell ── */
+.td-guest-name {
+  font-size: 0.82rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+.td-guest-desig {
+  font-size: 0.68rem;
+  color: rgba(200,210,230,0.3);
+  margin-top: 2px;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Duration cell ── */
+.td-duration {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+.td-duration svg { opacity: 0.5; }
+
+/* ── Spotify link in table ── */
+.td-spotify-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.7rem;
+  color: #1DB954;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.15s;
+}
+.td-spotify-link:hover { opacity: 1; }
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .podcast-stats { flex-wrap: wrap; gap: 1rem; }
+  .pod-stat-divider { display: none; }
+  .pod-stat { flex: 1 1 40%; }
+  .pod-cover-zone { max-width: 100%; aspect-ratio: 16/7; }
+}
+
+@media (max-width: 600px) {
+  .col-dur, .col-ep { display: none; }
+  .pod-ep-num { max-width: 100%; }
+}

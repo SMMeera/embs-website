@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login – IEEE EMBS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --purple: #6B2D8B;
+      --teal: #00A99D;
+      --font-heading: 'Syne', sans-serif;
+      --font-body: 'DM Sans', sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+      background: #0a0e1a;
+      font-family: var(--font-body);
+      overflow: hidden;
+    }
+
+    /* Background layers matching site theme */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: url('../bg image embs/network.jpeg') center / cover no-repeat;
+      opacity: 0.12;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 60% at 15% 60%, rgba(107,45,139,0.22) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 50% at 85% 40%, rgba(0,169,157,0.14) 0%, transparent 65%),
+        linear-gradient(160deg, #0a0e1a 0%, #0d1530 55%, #091a1a 100%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .page {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    /* Login card — glassmorphism */
+    .login-card {
+      width: 100%;
+      max-width: 400px;
+      background: rgba(8, 12, 28, 0.72);
+      border: 1px solid rgba(107, 45, 139, 0.35);
+      border-radius: 20px;
+      padding: 2.8rem 2.4rem 2.4rem;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      box-shadow:
+        0 0 0 1px rgba(0,169,157,0.06) inset,
+        0 24px 64px rgba(0,0,0,0.5),
+        0 0 40px rgba(107,45,139,0.15);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Top gradient line */
+    .login-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #6B2D8B, #00A99D);
+    }
+
+    /* Logo */
+    .login-logo-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1.4rem;
+    }
+
+    .login-logo {
+      height: 64px;
+      width: auto;
+      background: #fff;
+      border-radius: 12px;
+      padding: 6px 14px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.3);
+    }
+
+    /* Heading */
+    .login-title {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #e8eaf6;
+      text-align: center;
+      margin-bottom: 0.35rem;
+    }
+
+    .login-subtitle {
+      font-size: 0.78rem;
+      color: rgba(200,210,230,0.45);
+      text-align: center;
+      margin-bottom: 2rem;
+      letter-spacing: 0.03em;
+    }
+
+    /* Form */
+    .login-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .login-label {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: rgba(200,210,230,0.6);
+      letter-spacing: 0.04em;
+    }
+
+    .login-input-wrap {
+      position: relative;
+    }
+
+    .login-input {
+      width: 100%;
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      color: #e8eaf6;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(107,45,139,0.3);
+      border-radius: 10px;
+      padding: 0.75rem 2.8rem 0.75rem 1rem;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .login-input::placeholder { color: rgba(200,210,230,0.22); }
+
+    .login-input:focus {
+      border-color: rgba(107,45,139,0.65);
+      box-shadow: 0 0 0 3px rgba(107,45,139,0.14);
+    }
+
+    /* Toggle password visibility */
+    .toggle-pw {
+      position: absolute;
+      right: 0.75rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: rgba(200,210,230,0.35);
+      display: flex;
+      align-items: center;
+      padding: 0;
+      transition: color 0.2s;
+    }
+    .toggle-pw:hover { color: rgba(200,210,230,0.7); }
+
+    /* Error message */
+    .login-error {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.78rem;
+      color: #ff6b6b;
+      background: rgba(255,80,80,0.08);
+      border: 1px solid rgba(255,80,80,0.2);
+      border-radius: 8px;
+      padding: 0.6rem 0.9rem;
+      margin-bottom: 1.25rem;
+      opacity: 0;
+      transform: translateY(-6px);
+      transition: opacity 0.25s ease, transform 0.25s ease;
+      pointer-events: none;
+    }
+
+    .login-error.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    /* Login button */
+    .login-btn {
+      width: 100%;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.8rem;
+      border-radius: 999px;
+      border: none;
+      background: linear-gradient(90deg, #6B2D8B, #00A99D);
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 4px 18px rgba(107,45,139,0.3);
+      transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .login-btn:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(107,45,139,0.4);
+    }
+
+    .login-btn:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+
+    /* Spinner */
+    .spinner {
+      width: 16px;
+      height: 16px;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      display: none;
+      flex-shrink: 0;
+    }
+
+    .login-btn.loading .spinner { display: block; }
+    .login-btn.loading .btn-text { opacity: 0.7; }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* Back link */
+    .login-back {
+      display: block;
+      text-align: center;
+      margin-top: 1.4rem;
+      font-size: 0.75rem;
+      color: rgba(200,210,230,0.35);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .login-back:hover { color: rgba(0,169,157,0.8); }
+  </style>
+</head>
+<body>
+
+<div class="page">
+  <div class="login-card">
+
+    <div class="login-logo-wrap">
+      <img src="../EMBS logo.png" alt="IEEE EMBS Logo" class="login-logo" />
+    </div>
+
+    <h1 class="login-title">Admin Login</h1>
+    <p class="login-subtitle">IEEE EMBS Chapter — Restricted Access</p>
+
+    <div class="login-error" id="loginError">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 8v4M12 16h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <span id="loginErrorText">Incorrect password. Please try again.</span>
+    </div>
+
+    <form id="loginForm" onsubmit="return false;">
+      <div class="login-field">
+        <label class="login-label" for="password">Password</label>
+        <div class="login-input-wrap">
+          <input
+            type="password"
+            id="password"
+            class="login-input"
+            placeholder="Enter admin password"
+            autocomplete="current-password"
+            autofocus
+          />
+          <button type="button" class="toggle-pw" id="togglePw" aria-label="Toggle password visibility">
+            <svg id="eyeIcon" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <button type="submit" class="login-btn" id="loginBtn">
+        <div class="spinner" id="spinner"></div>
+        <span class="btn-text">Login</span>
+      </button>
+    </form>
+
+    <a href="../contact.html" class="login-back">← Back to website</a>
+
+  </div>
+</div>
+
+<script src="auth.js"></script>
+</body>
+</html>

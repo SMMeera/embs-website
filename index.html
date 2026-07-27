@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IEEE EMBS Navbar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="navbar.css" />
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+
+    <div class="nav-brand">
+      <div class="logo-wrap">
+        <img src="logo-cropped.png" alt="IEEE EMBS Logo" class="logo-img" />
+      </div>
+      <div class="brand-text">
+        <span class="brand-title">IEEE EMBS</span>
+        <span class="brand-sub">Student Chapter</span>
+      </div>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link active">Home</a></li>
+      <li class="nav-item-dropdown">
+        <a href="about.html" class="nav-link">About</a><button class="nav-dropdown-arrow" aria-label="Toggle About menu"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="nav-dropdown">
+          <li><a href="about.html#about-embs" class="nav-dropdown-item">About EMBS</a></li>
+          <li><a href="about.html#vision-mission" class="nav-dropdown-item">Vision &amp; Mission</a></li>
+          <li><a href="about.html#chapter-history" class="nav-dropdown-item">Chapter History</a></li>
+          <li><a href="about.html#core-team" class="nav-dropdown-item">Core Team</a></li>
+          <li><a href="about.html#join-embs" class="nav-dropdown-item">Join EMBS</a></li>
+        </ul>
+      </li>
+      <li class="nav-item-dropdown">
+        <a href="activities.html" class="nav-link">Activities</a><button class="nav-dropdown-arrow" aria-label="Toggle Activities menu"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="nav-dropdown">
+          <li><a href="events.html" class="nav-dropdown-item">Events</a></li>
+          <li><a href="projects.html" class="nav-dropdown-item">Projects &amp; Research</a></li>
+          <li><a href="blog.html" class="nav-dropdown-item">Blog &amp; Articles</a></li>
+          <li><a href="podcast.html" class="nav-dropdown-item">EMBS Podcast</a></li>
+          <li><a href="gallery.html" class="nav-dropdown-item">Gallery</a></li>
+        </ul>
+      </li>
+      <li class="nav-item-dropdown">
+        <a href="javascript:void(0)" class="nav-link">Community</a>
+        <button class="nav-dropdown-arrow" aria-label="Toggle Community menu">
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="nav-dropdown">
+          <li><a href="members.html"       class="nav-dropdown-item">Members</a></li>
+          <li><a href="achievements.html"  class="nav-dropdown-item">Achievements</a></li>
+          <li><a href="announcements.html" class="nav-dropdown-item">Announcements</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+</nav>
+
+<!-- Announcement Bar -->
+<div class="announce-bar">
+  <div class="announce-label">Updates</div>
+  <div class="announce-track-wrap">
+    <div class="announce-track"></div>
+  </div>
+</div>
+
+<section class="hero" id="hero">
+
+  <!-- Heart image left -->
+  <img class="hero-heart" src="bg image embs/heart.jpeg" alt="" />
+
+
+
+
+
+
+  <!-- Heartbeat pulse dot -->  
+  <div class="deco-pulse"></div>
+
+  <!-- Cross medical symbol -->
+  <svg class="deco-icon deco-cross" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+    <rect x="15" y="2" width="10" height="36" rx="2" fill="rgba(107,45,139,0.12)" stroke="rgba(107,45,139,0.28)" stroke-width="1"/>
+    <rect x="2" y="15" width="36" height="10" rx="2" fill="rgba(107,45,139,0.12)" stroke="rgba(107,45,139,0.28)" stroke-width="1"/>
+  </svg>
+
+  <div class="hero-container">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      IEEE Engineering in Medicine &amp; Biology Society
+    </div>
+    <h1 class="hero-heading">Where<br><span class="heading-gradient">Engineering</span><br>Meets<br>Medicine</h1>
+    <p class="hero-sub">A student-driven community at the intersection of biomedical engineering and innovation — building the future of healthcare technology.</p>
+    <div class="hero-buttons">
+      <a href="events.html" class="btn-primary">Explore Events</a>
+      <a href="podcast.html" class="btn-secondary"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;margin-right:6px"><rect x="9" y="2" width="6" height="11" rx="3" stroke="rgba(220,225,245,0.85)" stroke-width="1.8"/><path d="M5 10a7 7 0 0 0 14 0" stroke="rgba(220,225,245,0.85)" stroke-width="1.8" stroke-linecap="round"/><line x1="12" y1="17" x2="12" y2="22" stroke="rgba(220,225,245,0.85)" stroke-width="1.8" stroke-linecap="round"/></svg>Our Podcast</a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-number">340+</span>
+        <span class="stat-label">Members</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number">58</span>
+        <span class="stat-label">Activities</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number">24</span>
+        <span class="stat-label">Projects</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number">12</span>
+        <span class="stat-label">Awards</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Activities Section -->
+<section class="activities">
+  <div class="activities-container">
+
+    <div class="activities-header">
+      <div>
+        <span class="activities-label">Upcoming</span>
+        <h2 class="activities-title">Featured Activities</h2>
+      </div>
+      <a href="#" class="activities-viewall">View All &rarr;</a>
+    </div>
+
+    <div class="activities-grid">
+
+      <!-- Card 1 — edit text here -->
+      <div class="act-card">
+        <div class="act-card-top" style="background: linear-gradient(135deg, #3a0d5e, #00A99D)">
+          <span class="act-tag act-tag--upcoming">Upcoming</span>
+          <svg class="act-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="8" y="14" width="32" height="26" rx="3" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+            <line x1="8" y1="22" x2="40" y2="22" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+            <line x1="16" y1="8" x2="16" y2="18" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="32" y1="8" x2="32" y2="18" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-linecap="round"/>
+            <rect x="14" y="28" width="6" height="6" rx="1" fill="rgba(255,255,255,0.25)"/>
+            <rect x="22" y="28" width="6" height="6" rx="1" fill="rgba(255,255,255,0.25)"/>
+          </svg>
+        </div>
+        <div class="act-card-body">
+          <div class="act-meta">
+            <span class="act-type">Workshop</span>
+            <span class="act-date">Jan 15, 2025</span>
+          </div>
+          <h3 class="act-title">Biomedical Signal Processing Workshop</h3>
+          <p class="act-desc">Hands-on session covering ECG analysis, filtering techniques, and real-world biomedical data processing.</p>
+          <div class="act-footer">
+            <span class="act-location">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="rgba(0,169,157,0.8)" stroke-width="1.8"/><circle cx="12" cy="9" r="2.5" stroke="rgba(0,169,157,0.8)" stroke-width="1.5"/></svg>
+              Engineering Block, Room 204
+            </span>
+            <a href="#" class="act-btn act-btn--primary">Register</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 — edit text here -->
+      <div class="act-card">
+        <div class="act-card-top" style="background: linear-gradient(135deg, #1a0a3a, #6B2D8B)">
+          <span class="act-tag act-tag--hackathon">Hackathon</span>
+          <svg class="act-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="24,6 28,18 40,18 30,26 34,38 24,30 14,38 18,26 8,18 20,18" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" fill="rgba(255,255,255,0.06)"/>
+          </svg>
+        </div>
+        <div class="act-card-body">
+          <div class="act-meta">
+            <span class="act-type">Hackathon</span>
+            <span class="act-date">Feb 3, 2025</span>
+          </div>
+          <h3 class="act-title">MedTech Innovation Hackathon 2025</h3>
+          <p class="act-desc">48-hour challenge to design innovative healthcare solutions using embedded systems and AI.</p>
+          <div class="act-footer">
+            <span class="act-location">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="rgba(0,169,157,0.8)" stroke-width="1.8"/><circle cx="12" cy="9" r="2.5" stroke="rgba(0,169,157,0.8)" stroke-width="1.5"/></svg>
+              Main Auditorium
+            </span>
+            <a href="#" class="act-btn act-btn--primary">Register</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 — edit text here -->
+      <div class="act-card">
+        <div class="act-card-top" style="background: linear-gradient(135deg, #003d3a, #0d1530)">
+          <span class="act-tag act-tag--completed">Completed</span>
+          <svg class="act-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="20" r="10" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+            <line x1="24" y1="30" x2="24" y2="38" stroke="rgba(255,255,255,0.35)" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="18" y1="38" x2="30" y2="38" stroke="rgba(255,255,255,0.35)" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="24" y1="14" x2="24" y2="18" stroke="rgba(255,255,255,0.5)" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="24" y1="22" x2="27" y2="22" stroke="rgba(255,255,255,0.5)" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="act-card-body">
+          <div class="act-meta">
+            <span class="act-type">Seminar</span>
+            <span class="act-date">Dec 10, 2024</span>
+          </div>
+          <h3 class="act-title">Guest Lecture: AI in Medical Imaging</h3>
+          <p class="act-desc">An insightful session by Dr. Placeholder on the role of deep learning in modern diagnostic imaging.</p>
+          <div class="act-footer">
+            <span class="act-location">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="rgba(0,169,157,0.8)" stroke-width="1.8"/><circle cx="12" cy="9" r="2.5" stroke="rgba(0,169,157,0.8)" stroke-width="1.5"/></svg>
+              Seminar Hall B
+            </span>
+            <a href="#" class="act-btn act-btn--ghost">Gallery</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Podcast Section -->
+<section class="podcast">
+  <div class="podcast-container">
+
+    <div class="podcast-top">
+
+      <!-- Left: cover image — replace src when ready -->
+      <div class="podcast-cover">
+        <img src="" alt="Podcast Cover" class="podcast-cover-img" />
+        <div class="podcast-cover-placeholder">Cover Image</div>
+      </div>
+
+      <!-- Right: text + button -->
+      <div class="podcast-right">
+        <span class="podcast-label">New Episodes</span>
+        <h2 class="podcast-title">EMBS Podcast</h2>
+        <p class="podcast-desc">Conversations at the crossroads of engineering and medicine. Each episode features student researchers, faculty, and industry guests exploring the future of biomedical technology.</p>
+        <a href="#" class="podcast-spotify-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424a.623.623 0 0 1-.857.207c-2.348-1.435-5.304-1.76-8.785-.964a.623.623 0 1 1-.277-1.215c3.809-.87 7.076-.496 9.712 1.115a.623.623 0 0 1 .207.857zm1.223-2.722a.78.78 0 0 1-1.072.257C14.1 12.235 10.539 11.75 7.2 12.68a.78.78 0 0 1-.963-.52.78.78 0 0 1 .52-.963c3.779-1.045 7.768-.538 10.794 1.433a.78.78 0 0 1 .258 1.072zm.105-2.835C14.692 8.95 9.375 8.775 6.297 9.71a.937.937 0 1 1-.543-1.793c3.532-1.072 9.404-.865 13.115 1.338a.937.937 0 0 1-.955 1.612z"/></svg>
+          Listen on Spotify
+        </a>
+      </div>
+    </div>
+
+    <!-- Episode Cards -->
+    <div class="podcast-episodes">
+
+      <!-- Episode 1 — edit here -->
+      <div class="ep-card">
+        <div class="ep-num">EP 01</div>
+        <div class="ep-info">
+          <h4 class="ep-title">The Future of Neural Interfaces</h4>
+          <span class="ep-speaker">Dr. Placeholder &mdash; Neurotechnology Researcher</span>
+        </div>
+        <div class="ep-controls">
+          <button class="ep-play" aria-label="Play">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+          </button>
+          <div class="ep-progress"><div class="ep-progress-fill" style="width:62%"></div></div>
+          <span class="ep-duration">38 min</span>
+        </div>
+      </div>
+
+      <!-- Episode 2 — edit here -->
+      <div class="ep-card">
+        <div class="ep-num">EP 02</div>
+        <div class="ep-info">
+          <h4 class="ep-title">Wearables in Clinical Diagnostics</h4>
+          <span class="ep-speaker">Placeholder Speaker &mdash; Biomedical Engineer</span>
+        </div>
+        <div class="ep-controls">
+          <button class="ep-play" aria-label="Play">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+          </button>
+          <div class="ep-progress"><div class="ep-progress-fill" style="width:35%"></div></div>
+          <span class="ep-duration">44 min</span>
+        </div>
+      </div>
+
+      <!-- Episode 3 — edit here -->
+      <div class="ep-card">
+        <div class="ep-num">EP 03</div>
+        <div class="ep-info">
+          <h4 class="ep-title">AI-Driven Drug Discovery</h4>
+          <span class="ep-speaker">Placeholder Speaker &mdash; Computational Biologist</span>
+        </div>
+        <div class="ep-controls">
+          <button class="ep-play" aria-label="Play">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+          </button>
+          <div class="ep-progress"><div class="ep-progress-fill" style="width:80%"></div></div>
+          <span class="ep-duration">51 min</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Why Join Section -->
+<section class="whyjoin">
+  <div class="whyjoin-container">
+
+    <div class="whyjoin-header">
+      <span class="whyjoin-label">Why Us</span>
+      <h2 class="whyjoin-title">Why Join IEEE EMBS?</h2>
+    </div>
+
+    <div class="whyjoin-grid">
+
+      <!-- Card 1 — edit here -->
+      <div class="wj-card">
+        <div class="wj-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="12" r="6" stroke="#6B2D8B" stroke-width="1.8"/>
+            <path d="M8 34c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="#6B2D8B" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M28 16l3 3-3 3" stroke="#00A99D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 class="wj-title">Leadership</h3>
+        <p class="wj-desc">Take on real roles in organizing events, managing teams, and representing IEEE EMBS at regional and national levels.</p>
+      </div>
+
+      <!-- Card 2 — edit here -->
+      <div class="wj-card">
+        <div class="wj-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="10" width="28" height="22" rx="3" stroke="#6B2D8B" stroke-width="1.8"/>
+            <line x1="12" y1="18" x2="28" y2="18" stroke="#00A99D" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="12" y1="23" x2="22" y2="23" stroke="#00A99D" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="30" cy="10" r="5" fill="#6B2D8B"/>
+            <line x1="30" y1="7" x2="30" y2="13" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/>
+            <line x1="27" y1="10" x2="33" y2="10" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="wj-title">Research</h3>
+        <p class="wj-desc">Collaborate on biomedical research projects, publish findings, and gain hands-on experience with cutting-edge medical technologies.</p>
+      </div>
+
+      <!-- Card 3 — edit here -->
+      <div class="wj-card">
+        <div class="wj-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="20" r="5" stroke="#6B2D8B" stroke-width="1.8"/>
+            <circle cx="28" cy="12" r="5" stroke="#6B2D8B" stroke-width="1.8"/>
+            <circle cx="28" cy="28" r="5" stroke="#6B2D8B" stroke-width="1.8"/>
+            <line x1="17" y1="18" x2="23" y2="14" stroke="#00A99D" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="17" y1="22" x2="23" y2="26" stroke="#00A99D" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="wj-title">Networking</h3>
+        <p class="wj-desc">Connect with students, faculty, and industry professionals across the global IEEE EMBS community and build lasting relationships.</p>
+      </div>
+
+      <!-- Card 4 — edit here -->
+      <div class="wj-card">
+        <div class="wj-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="9" y="8" width="14" height="18" rx="7" stroke="#6B2D8B" stroke-width="1.8"/>
+            <path d="M7 22a9 9 0 0 0 18 0" stroke="#00A99D" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="16" y1="31" x2="16" y2="36" stroke="#6B2D8B" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="28" y1="14" x2="34" y2="14" stroke="#00A99D" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="28" y1="19" x2="34" y2="19" stroke="#00A99D" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="28" y1="24" x2="32" y2="24" stroke="#00A99D" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="wj-title">Podcast &amp; Media</h3>
+        <p class="wj-desc">Be part of our student-run podcast, create content, and amplify the voice of biomedical engineering to a wider audience.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Recent Achievements Section -->
+<section class="achievements">
+  <div class="achievements-container">
+
+    <div class="achievements-header">
+      <div>
+        <span class="achievements-label">Recognition</span>
+        <h2 class="achievements-title">Recent Achievements</h2>
+      </div>
+      <a href="#" class="achievements-viewall">View All &rarr;</a>
+    </div>
+
+    <div class="achievements-grid">
+
+      <!-- Card 1 — edit here -->
+      <div class="ach-card">
+        <div class="ach-card-top">
+          <div class="ach-icon">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 6l3.09 9.26H32l-7.27 5.27 2.77 8.53L20 24l-7.5 5.06 2.77-8.53L8 15.26h8.91z" stroke="#6B2D8B" stroke-width="1.8" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span class="ach-tag ach-tag--award">Award</span>
+        </div>
+        <h3 class="ach-title">Best Student Chapter Award</h3>
+        <p class="ach-meta">Placeholder Name &mdash; IEEE Regional Conference 2024</p>
+      </div>
+
+      <!-- Card 2 — edit here -->
+      <div class="ach-card">
+        <div class="ach-card-top">
+          <div class="ach-icon">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="7" y="8" width="26" height="28" rx="3" stroke="#00A99D" stroke-width="1.8"/>
+              <line x1="13" y1="17" x2="27" y2="17" stroke="#00A99D" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="13" y1="22" x2="27" y2="22" stroke="#00A99D" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="13" y1="27" x2="21" y2="27" stroke="#00A99D" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <span class="ach-tag ach-tag--publication">Publication</span>
+        </div>
+        <h3 class="ach-title">Research Paper on Neural Signal Classification</h3>
+        <p class="ach-meta">Placeholder Author &mdash; IEEE EMBC Journal 2024</p>
+      </div>
+
+      <!-- Card 3 — edit here -->
+      <div class="ach-card">
+        <div class="ach-card-top">
+          <div class="ach-icon">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="20,5 24,15 35,15 26,22 29,33 20,27 11,33 14,22 5,15 16,15" stroke="#6B2D8B" stroke-width="1.8" stroke-linejoin="round" fill="rgba(107,45,139,0.06)"/>
+            </svg>
+          </div>
+          <span class="ach-tag ach-tag--competition">Competition</span>
+        </div>
+        <h3 class="ach-title">1st Place &mdash; MedTech Hackathon</h3>
+        <p class="ach-meta">Team Placeholder &mdash; National MedTech Challenge 2024</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Faculty Coordinators Section -->
+<section class="faculty">
+  <div class="faculty-container">
+
+    <div class="faculty-header">
+      <span class="faculty-label">Advisors</span>
+      <h2 class="faculty-title">Faculty Coordinators</h2>
+    </div>
+
+    <div class="faculty-grid">
+
+      <!-- Card 1 — Dr. Allwyn Gnanadas -->
+      <div class="fac-card">
+        <div class="fac-avatar">AG</div>
+        <h3 class="fac-name">Dr. Allwyn Gnanadas</h3>
+        <span class="fac-role">Faculty Coordinator</span>
+      </div>
+
+      <!-- Card 2 — edit name here -->
+      <div class="fac-card">
+        <div class="fac-avatar fac-avatar--empty"></div>
+        <h3 class="fac-name fac-name--empty">Name Placeholder</h3>
+        <span class="fac-role">Faculty Advisor</span>
+      </div>
+
+      <!-- Card 3 — edit name here -->
+      <div class="fac-card">
+        <div class="fac-avatar fac-avatar--empty"></div>
+        <h3 class="fac-name fac-name--empty">Name Placeholder</h3>
+        <span class="fac-role">Faculty Advisor</span>
+      </div>
+
+      <!-- Card 4 — edit name here -->
+      <div class="fac-card">
+        <div class="fac-avatar fac-avatar--empty"></div>
+        <h3 class="fac-name fac-name--empty">Name Placeholder</h3>
+        <span class="fac-role">Faculty Advisor</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-grid">
+
+      <!-- Col 1: Brand -->
+      <div class="footer-col footer-brand">
+        <div class="footer-brand-top">
+          <div class="footer-logo-placeholder"></div>
+          <span class="footer-brand-name">IEEE EMBS Chapter</span>
+        </div>
+        <p class="footer-desc">Advancing innovation at the intersection of engineering and medicine. A student-driven community committed to biomedical research, technology, and impact.</p>
+        <div class="footer-socials">
+          <!-- LinkedIn -->
+          <a href="#" class="footer-social-icon" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="4" stroke="currentColor" stroke-width="1.5"/><line x1="7" y1="10" x2="7" y2="17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="7" cy="7" r="1" fill="currentColor"/><path d="M11 17v-4a2 2 0 0 1 4 0v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="11" y1="10" x2="11" y2="17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </a>
+          <!-- Instagram -->
+          <a href="#" class="footer-social-icon" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          </a>
+          <!-- Twitter/X -->
+          <a href="#" class="footer-social-icon" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4l16 16M4 20L20 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </a>
+          <!-- YouTube -->
+          <a href="#" class="footer-social-icon" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="5" width="20" height="14" rx="4" stroke="currentColor" stroke-width="1.5"/><polygon points="10,9 16,12 10,15" fill="currentColor"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Col 2: Quick Links -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#">About EMBS</a></li>
+          <li><a href="#">Activities</a></li>
+          <li><a href="#">Achievements</a></li>
+          <li><a href="#">Research</a></li>
+          <li><a href="#">Podcast</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Resources -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Resources</h4>
+        <ul class="footer-links">
+          <li><a href="#">IEEE EMBS Global</a></li>
+          <li><a href="#">Publications</a></li>
+          <li><a href="#">Certificates</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Newsletter -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Newsletter</h4>
+        <p class="footer-newsletter-desc">Get updates on events, research, and podcast drops.</p>
+        <form class="footer-newsletter-form" onsubmit="return false;">
+          <input type="email" class="footer-email-input" placeholder="Your email address" />
+          <button type="submit" class="footer-email-btn">Subscribe</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    <div class="footer-bottom-inner">
+      <span class="footer-copy">&copy; 2025 IEEE EMBS &ndash; KPR Institute of Engineering and Technology Student Chapter. All rights reserved.</span>
+      <span class="footer-credit">Designed by EMBS Web Team</span>
+    </div>
+  </div>
+</footer>
+<script src="navbar.js" defer></script>
+<script src="announceBar.js" defer></script>
+<script src="newsletter.js" defer></script>
+<script type="module" src="featuredEventsService.js"></script>
+</html>

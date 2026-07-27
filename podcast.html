@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Podcast – IEEE EMBS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="podcast.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+
+    <div class="nav-brand">
+      <div class="logo-wrap">
+        <img src="logo-cropped.png" alt="IEEE EMBS Logo" class="logo-img" />
+      </div>
+      <div class="brand-text">
+        <span class="brand-title">IEEE EMBS</span>
+        <span class="brand-sub">Student Chapter</span>
+      </div>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+
+      <li><a href="index.html" class="nav-link">Home</a></li>
+
+      <li class="nav-item-dropdown">
+        <a href="about.html" class="nav-link">About</a>
+        <button class="nav-dropdown-arrow" aria-label="Toggle About menu">
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="nav-dropdown">
+          <li><a href="about.html#about-embs"      class="nav-dropdown-item">About EMBS</a></li>
+          <li><a href="about.html#vision-mission"  class="nav-dropdown-item">Vision &amp; Mission</a></li>
+          <li><a href="about.html#chapter-history" class="nav-dropdown-item">Chapter History</a></li>
+          <li><a href="about.html#core-team"       class="nav-dropdown-item">Core Team</a></li>
+          <li><a href="about.html#join-embs"       class="nav-dropdown-item">Join EMBS</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item-dropdown">
+        <a href="activities.html" class="nav-link active">Activities</a>
+        <button class="nav-dropdown-arrow" aria-label="Toggle Activities menu">
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="nav-dropdown">
+          <li><a href="events.html"   class="nav-dropdown-item">Events</a></li>
+          <li><a href="projects.html" class="nav-dropdown-item">Projects &amp; Research</a></li>
+          <li><a href="blog.html"     class="nav-dropdown-item">Blog &amp; Articles</a></li>
+          <li><a href="podcast.html"  class="nav-dropdown-item">EMBS Podcast</a></li>
+          <li><a href="gallery.html" class="nav-dropdown-item">Gallery</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item-dropdown">
+        <a href="javascript:void(0)" class="nav-link">Community</a>
+        <button class="nav-dropdown-arrow" aria-label="Toggle Community menu">
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="nav-dropdown">
+          <li><a href="members.html"       class="nav-dropdown-item">Members</a></li>
+          <li><a href="achievements.html"  class="nav-dropdown-item">Achievements</a></li>
+          <li><a href="announcements.html" class="nav-dropdown-item">Announcements</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════
+     ANNOUNCEMENT BAR
+════════════════════════════════════════ -->
+<div class="announce-bar">
+  <div class="announce-label">Updates</div>
+  <div class="announce-track-wrap">
+    <div class="announce-track"></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     MAIN CONTENT
+════════════════════════════════════════ -->
+<main id="podcast-main">
+
+  <!-- ═══════════════════════════════════════
+       SECTION 1 — HERO
+  ════════════════════════════════════════ -->
+  <section id="pod-hero" class="pod-hero">
+    <div class="pod-hero-inner">
+
+      <!-- ── Left: Text ── -->
+      <div class="pod-hero-left">
+
+        <span class="pod-hero-label">
+          <span class="pod-hero-label-dot"></span>
+          IEEE EMBS Podcast
+        </span>
+
+        <h1 class="pod-hero-heading">
+          Real Conversations in
+          <span class="pod-hero-gradient">Medical Technology &amp; Biomedical Innovation</span>
+        </h1>
+
+        <p class="pod-hero-desc">Deep-dive discussions with researchers, clinicians, and engineers shaping the future of healthcare. New episodes every fortnight — free on all major platforms.</p>
+
+        <div class="pod-hero-btns">
+          <a href="#" class="pod-btn-primary" aria-label="Listen on Spotify">
+            <!-- Spotify icon -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424a.623.623 0 0 1-.857.207c-2.348-1.435-5.304-1.76-8.785-.964a.623.623 0 1 1-.277-1.215c3.809-.87 7.076-.496 9.712 1.115a.623.623 0 0 1 .207.857zm1.223-2.722a.78.78 0 0 1-1.072.257c-2.687-1.652-6.785-2.131-9.965-1.166a.78.78 0 0 1-.973-.519.781.781 0 0 1 .52-.973c3.632-1.102 8.147-.568 11.233 1.329a.78.78 0 0 1 .257 1.072zm.105-2.835C14.692 8.95 9.375 8.775 6.297 9.71a.937.937 0 1 1-.543-1.793c3.532-1.072 9.404-.865 13.115 1.338a.937.937 0 0 1-.955 1.612z"/></svg>
+            Listen on Spotify
+          </a>
+          <a href="#pod-latest" class="pod-btn-secondary" aria-label="Browse Episodes">
+            <!-- Headphones icon -->
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+            Browse Episodes
+          </a>
+        </div>
+
+        <!-- Episode count strip -->
+        <div class="pod-hero-meta">
+          <div class="pod-hero-meta-item">
+            <span class="pod-hero-meta-num">24+</span>
+            <span class="pod-hero-meta-label">Episodes</span>
+          </div>
+          <div class="pod-hero-meta-divider"></div>
+          <div class="pod-hero-meta-item">
+            <span class="pod-hero-meta-num">12+</span>
+            <span class="pod-hero-meta-label">Expert Guests</span>
+          </div>
+          <div class="pod-hero-meta-divider"></div>
+          <div class="pod-hero-meta-item">
+            <span class="pod-hero-meta-num">4</span>
+            <span class="pod-hero-meta-label">Platforms</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── Right: Illustration placeholder ── -->
+      <div class="pod-hero-right" aria-hidden="true">
+
+        <!-- Outer glow ring -->
+        <div class="pod-hero-ring pod-hero-ring--outer"></div>
+        <div class="pod-hero-ring pod-hero-ring--inner"></div>
+
+        <!-- Main illustration box — replace contents with your image/SVG -->
+        <div class="pod-hero-illus">
+
+          <!-- Microphone SVG illustration -->
+          <svg class="pod-hero-mic" viewBox="0 0 160 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Stand base -->
+            <rect x="60" y="175" width="40" height="6" rx="3" fill="rgba(0,169,157,0.5)"/>
+            <rect x="76" y="145" width="8" height="32" rx="4" fill="rgba(0,169,157,0.4)"/>
+            <!-- Arm curve -->
+            <path d="M80 145 C80 120 40 120 40 95" stroke="rgba(0,169,157,0.5)" stroke-width="5" stroke-linecap="round" fill="none"/>
+            <path d="M80 145 C80 120 120 120 120 95" stroke="rgba(107,45,139,0.5)" stroke-width="5" stroke-linecap="round" fill="none"/>
+            <!-- Mic body -->
+            <rect x="55" y="30" width="50" height="90" rx="25" fill="url(#micGrad)"/>
+            <!-- Mic grille lines -->
+            <line x1="65" y1="55" x2="95" y2="55" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="63" y1="65" x2="97" y2="65" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="63" y1="75" x2="97" y2="75" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="63" y1="85" x2="97" y2="85" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="65" y1="95" x2="95" y2="95" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" stroke-linecap="round"/>
+            <!-- Mic highlight -->
+            <rect x="63" y="38" width="12" height="30" rx="6" fill="rgba(255,255,255,0.12)"/>
+            <defs>
+              <linearGradient id="micGrad" x1="55" y1="30" x2="105" y2="120" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#6B2D8B"/>
+                <stop offset="100%" stop-color="#00A99D"/>
+              </linearGradient>
+            </defs>
+          </svg>
+
+          <!-- Waveform bars -->
+          <div class="pod-hero-wave" aria-hidden="true">
+            <span style="--h:30%"></span>
+            <span style="--h:60%"></span>
+            <span style="--h:45%"></span>
+            <span style="--h:80%"></span>
+            <span style="--h:55%"></span>
+            <span style="--h:95%"></span>
+            <span style="--h:65%"></span>
+            <span style="--h:100%"></span>
+            <span style="--h:70%"></span>
+            <span style="--h:85%"></span>
+            <span style="--h:50%"></span>
+            <span style="--h:75%"></span>
+            <span style="--h:40%"></span>
+            <span style="--h:60%"></span>
+            <span style="--h:30%"></span>
+          </div>
+
+          <!-- Floating particles -->
+          <span class="pod-particle pod-particle--1"></span>
+          <span class="pod-particle pod-particle--2"></span>
+          <span class="pod-particle pod-particle--3"></span>
+          <span class="pod-particle pod-particle--4"></span>
+
+        </div>
+        <!-- END illustration — replace above div contents with <img src="your-image.png" alt="..."> -->
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 2 — FEATURED EPISODE
+  ════════════════════════════════════════ -->
+  <section id="pod-featured" class="pod-featured">
+    <div class="pod-featured-inner">
+
+      <!-- Section header -->
+      <div class="pod-featured-header">
+        <span class="pod-featured-label">Featured Episode</span>
+        <h2 class="pod-featured-title">Latest Conversation</h2>
+        <p class="pod-featured-desc">Our most recent deep-dive with a leading voice in biomedical engineering and healthcare technology.</p>
+      </div>
+
+      <!-- Glass card -->
+      <article class="pod-feat-card">
+
+        <!-- Top gradient accent line -->
+        <div class="pod-feat-card-accent" aria-hidden="true"></div>
+
+        <div class="pod-feat-card-body">
+
+          <!-- ── LEFT: Thumbnail ── -->
+          <div class="pod-feat-thumb-col">
+
+            <!-- Replace src with episode cover image -->
+            <div class="pod-feat-thumb-wrap">
+              <img
+                src="bg image embs/glassdna.jpeg"
+                alt="Episode cover — AI in Healthcare: From Research to Real Hospitals"
+                class="pod-feat-thumb-img"
+              />
+
+              <!-- Badges overlaid on image -->
+              <span class="pod-feat-badge pod-feat-badge--latest">Latest</span>
+
+              <div class="pod-feat-thumb-meta">
+                <span class="pod-feat-ep-num">EP. 24</span>
+                <span class="pod-feat-duration">
+                  <!-- Clock icon -->
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  48 min
+                </span>
+              </div>
+            </div>
+
+          </div>
+          <!-- END left -->
+
+          <!-- ── RIGHT: Content ── -->
+          <div class="pod-feat-content-col">
+
+            <!-- Episode title -->
+            <h3 class="pod-feat-ep-title">AI in Healthcare: From Research to Real Hospitals</h3>
+
+            <!-- Guest -->
+            <div class="pod-feat-guest">
+              <!-- Guest avatar placeholder — replace with <img> -->
+              <div class="pod-feat-guest-avatar" aria-hidden="true">
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="20" cy="15" r="7" stroke="rgba(0,169,157,0.7)" stroke-width="1.5"/>
+                  <path d="M6 36c0-7.732 6.268-14 14-14s14 6.268 14 14" stroke="rgba(0,169,157,0.7)" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="pod-feat-guest-info">
+                <span class="pod-feat-guest-name">Dr. Ananya Raman</span>
+                <span class="pod-feat-guest-role">Healthcare AI Researcher</span>
+              </div>
+            </div>
+
+            <!-- Summary -->
+            <p class="pod-feat-summary">In this episode, Dr. Ananya Raman walks us through the journey of AI-powered diagnostic tools — from academic prototypes to live deployment in major hospital networks. We explore the regulatory challenges, clinical validation processes, and the human factors that determine whether a model ever reaches a patient's bedside.</p>
+
+            <!-- Topic pills -->
+            <div class="pod-feat-pills" role="list" aria-label="Episode topics">
+              <span class="pod-feat-pill" role="listitem">AI</span>
+              <span class="pod-feat-pill" role="listitem">Healthcare</span>
+              <span class="pod-feat-pill" role="listitem">Research</span>
+              <span class="pod-feat-pill" role="listitem">Innovation</span>
+            </div>
+
+            <!-- Action buttons -->
+            <div class="pod-feat-actions" role="group" aria-label="Listen options">
+
+              <a href="#" class="pod-feat-btn pod-feat-btn--play" aria-label="Play episode">
+                <!-- Play icon -->
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg>
+                Play Episode
+              </a>
+
+              <a href="#" class="pod-feat-btn pod-feat-btn--spotify" aria-label="Listen on Spotify">
+                <!-- Spotify icon -->
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424a.623.623 0 0 1-.857.207c-2.348-1.435-5.304-1.76-8.785-.964a.623.623 0 1 1-.277-1.215c3.809-.87 7.076-.496 9.712 1.115a.623.623 0 0 1 .207.857zm1.223-2.722a.78.78 0 0 1-1.072.257c-2.687-1.652-6.785-2.131-9.965-1.166a.78.78 0 0 1-.973-.519.781.781 0 0 1 .52-.973c3.632-1.102 8.147-.568 11.233 1.329a.78.78 0 0 1 .257 1.072zm.105-2.835C14.692 8.95 9.375 8.775 6.297 9.71a.937.937 0 1 1-.543-1.793c3.532-1.072 9.404-.865 13.115 1.338a.937.937 0 0 1-.955 1.612z"/></svg>
+                Spotify
+              </a>
+
+            </div>
+            <!-- END actions -->
+
+          </div>
+          <!-- END right -->
+
+        </div>
+        <!-- END card body -->
+
+        <!-- Waveform progress bar -->
+        <div class="pod-feat-waveform" aria-label="Episode audio waveform" role="img">
+          <div class="pod-feat-waveform-bars" aria-hidden="true">
+            <span style="--h:35%"></span>
+            <span style="--h:55%"></span>
+            <span style="--h:70%"></span>
+            <span style="--h:45%"></span>
+            <span style="--h:85%"></span>
+            <span style="--h:60%"></span>
+            <span style="--h:95%"></span>
+            <span style="--h:75%"></span>
+            <span style="--h:100%"></span>
+            <span style="--h:80%"></span>
+            <span style="--h:65%"></span>
+            <span style="--h:90%"></span>
+            <span style="--h:50%"></span>
+            <span style="--h:70%"></span>
+            <span style="--h:40%"></span>
+            <span style="--h:60%"></span>
+            <span style="--h:80%"></span>
+            <span style="--h:55%"></span>
+            <span style="--h:75%"></span>
+            <span style="--h:45%"></span>
+            <span style="--h:65%"></span>
+            <span style="--h:90%"></span>
+            <span style="--h:50%"></span>
+            <span style="--h:70%"></span>
+            <span style="--h:35%"></span>
+            <span style="--h:55%"></span>
+            <span style="--h:80%"></span>
+            <span style="--h:60%"></span>
+            <span style="--h:95%"></span>
+            <span style="--h:40%"></span>
+            <!-- Progress marker — edit width on .pod-feat-waveform-played to set playback position -->
+          </div>
+          <div class="pod-feat-waveform-track">
+            <div class="pod-feat-waveform-played" style="width: 35%;"></div>
+          </div>
+          <div class="pod-feat-waveform-times">
+            <span class="pod-feat-time-current">16:48</span>
+            <span class="pod-feat-time-total">48:00</span>
+          </div>
+        </div>
+        <!-- END waveform -->
+
+      </article>
+      <!-- END glass card -->
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 3 — LATEST EPISODES
+  ════════════════════════════════════════ -->
+  <section id="pod-latest" class="pod-latest">
+    <div class="pod-latest-inner">
+
+      <!-- Section header -->
+      <div class="pod-latest-header">
+        <span class="pod-latest-label">All Episodes</span>
+        <h2 class="pod-latest-title">Latest Episodes</h2>
+        <p class="pod-latest-desc">Explore our growing library of conversations with researchers, clinicians, and innovators in biomedical engineering.</p>
+      </div>
+
+      <!-- Episode grid -->
+      <div class="pod-ep-grid">
+
+        <!-- ── Card 1 — EP 06 ── -->
+        <article class="pod-ep-card">
+          <div class="pod-ep-thumb-wrap">
+            <!-- Replace src to change episode thumbnail -->
+            <img src="bg image embs/network.jpeg" alt="Wearable Health Monitoring episode thumbnail" class="pod-ep-thumb" />
+            <span class="pod-ep-num">EP. 06</span>
+            <span class="pod-ep-badge">Wearables</span>
+          </div>
+          <div class="pod-ep-body">
+            <h3 class="pod-ep-title">Wearable Health Monitoring</h3>
+            <div class="pod-ep-meta">
+              <span class="pod-ep-guest">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.582-7 8-7s8 3 8 7"/></svg>
+                Dr. Ravi Kumar
+              </span>
+              <span class="pod-ep-duration">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                42 min
+              </span>
+            </div>
+            <p class="pod-ep-desc">Exploring next-generation wearable sensors for continuous, non-invasive patient health monitoring.</p>
+            <div class="pod-ep-waveform" aria-hidden="true">
+              <span style="--h:40%"></span><span style="--h:65%"></span><span style="--h:50%"></span>
+              <span style="--h:80%"></span><span style="--h:60%"></span><span style="--h:90%"></span>
+              <span style="--h:70%"></span><span style="--h:100%"></span><span style="--h:75%"></span>
+              <span style="--h:55%"></span><span style="--h:85%"></span><span style="--h:45%"></span>
+              <span style="--h:65%"></span><span style="--h:35%"></span><span style="--h:55%"></span>
+            </div>
+            <div class="pod-ep-actions">
+              <a href="#" class="pod-ep-btn pod-ep-btn--play" aria-label="Play Wearable Health Monitoring episode">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg>
+                Play Episode
+              </a>
+              <a href="#" class="pod-ep-btn pod-ep-btn--spotify" aria-label="Listen on Spotify">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424a.623.623 0 0 1-.857.207c-2.348-1.435-5.304-1.76-8.785-.964a.623.623 0 1 1-.277-1.215c3.809-.87 7.076-.496 9.712 1.115a.623.623 0 0 1 .207.857zm1.223-2.722a.78.78 0 0 1-1.072.257c-2.687-1.652-6.785-2.131-9.965-1.166a.78.78 0 0 1-.973-.519.781.781 0 0 1 .52-.973c3.632-1.102 8.147-.568 11.233 1.329a.78.78 0 0 1 .257 1.072zm.105-2.835C14.692 8.95 9.375 8.775 6.297 9.71a.937.937 0 1 1-.543-1.793c3.532-1.072 9.404-.865 13.115 1.338a.937.937 0 0 1-.955 1.612z"/></svg>
+                Spotify
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── Card 2 — EP 05 ── -->
+        <article class="pod-ep-card">
+          <div class="pod-ep-thumb-wrap">
+            <img src="bg image embs/bluedns.jpeg" alt="AI in Medical Imaging episode thumbnail" class="pod-ep-thumb" />
+            <span class="pod-ep-num">EP. 05</span>
+            <span class="pod-ep-badge">AI</span>
+          </div>
+          <div class="pod-ep-body">
+            <h3 class="pod-ep-title">AI in Medical Imaging</h3>
+            <div class="pod-ep-meta">
+              <span class="pod-ep-guest">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.582-7 8-7s8 3 8 7"/></svg>
+                Prof. Meera Krishnan
+              </span>
+              <span class="pod-ep-duration">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                38 min
+              </span>
+            </div>
+            <p class="pod-ep-desc">How deep learning models are transforming radiology, pathology, and diagnostic accuracy in clinical settings.</p>
+            <div class="pod-ep-waveform" aria-hidden="true">
+              <span style="--h:55%"></span><span style="--h:75%"></span><span style="--h:45%"></span>
+              <span style="--h:90%"></span><span style="--h:65%"></span><span style="--h:100%"></span>
+              <span style="--h:80%"></span><span style="--h:50%"></span><span style="--h:70%"></span>
+              <span style="--h:40%"></span><span style="--h:60%"></span><span style="--h:85%"></span>
+              <span style="--h:55%"></span><span style="--h:70%"></span><span style="--h:40%"></span>
+            </div>
+            <div class="pod-ep-actions">
+              <a href="#" class="pod-ep-btn pod-ep-btn--play" aria-label="Play AI in Medical Imaging episode">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg>
+                Play Episode
+              </a>
+              <a href="#" class="pod-ep-btn pod-ep-btn--spotify" aria-label="Listen on Spotify">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424a.623.623 0 0 1-.857.207c-2.348-1.435-5.304-1.76-8.785-.964a.623.623 0 1 1-.277-1.215c3.809-.87 7.076-.496 9.712 1.115a.623.623 0 0 1 .207.857zm1.223-2.722a.78.78 0 0 1-1.072.257c-2.687-1.652-6.785-2.131-9.965-1.166a.78.78 0 0 1-.973-.519.781.781 0 0 1 .52-.973c3.632-1.102 8.147-.568 11.233 1.329a.78.78 0 0 1 .257 1.072zm.105-2.835C14.692 8.95 9.375 8.775 6.297 9.71a.937.937 0 1 1-.543-1.793c3.532-1.072 9.404-.865 13.115 1.338a.937.937 0 0 1-.955 1.612z"/></svg>
+                Spotify
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── Card 3 — EP 04 ── -->
+        <article class="pod-ep-card">
+          <div class="pod-ep-thumb-wrap">
+            <img src="bg image embs/heart.jpeg" alt="Future of Biomedical Devices episode thumbnail" class="pod-ep-thumb" />
+            <span class="pod-ep-num">EP. 04</span>
+            <span class="pod-ep-badge">Devices</span>
+          </div>
+          <div class="pod-ep-body">
+            <h3 class="pod-ep-title">Future of Biomedical Devices</h3>
+            <div class="pod-ep-meta">
+              <span class="pod-ep-guest">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.582-7 8-7s8 3 8 7"/></svg>
+                Dr. S. Harini
+              </span>
+              <span class="pod-ep-duration">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                45 min
+              </span>
+            </div>
+            <p class="pod-ep-desc">A look at emerging implantable and smart biomedical devices reshaping patient care and chronic disease management.</p>
+            <div class="pod-ep-waveform" aria-hidden="true">
+              <span style="--h:35%"></span><span style="--h:60%"></span><span style="--h:80%"></span>
+              <span style="--h:50%"></span><span style="--h:95%"></span><span style="--h:70%"></span>
+              <span style="--h:45%"></span><span style="--h:85%"></span><span style="--h:60%"></span>
+              <span style="--h:100%"></span><span style="--h:75%"></span><span style="--h:55%"></span>
+              <span style="--h:40%"></span><span style="--h:65%"></span><span style="--h:50%"></span>
+            </div>
+            <div class="pod-ep-actions">
+              <a href="#" class="pod-ep-btn pod-ep-btn--play" aria-label="Play Future of Biomedical Devices episode">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg>
+                Play Episode
+              </a>
+              <a href="#" class="pod-ep-btn pod-ep-btn--spotify" aria-label="Listen on Spotify">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424a.623.623 0 0 1-.857.207c-2.348-1.435-5.304-1.76-8.785-.964a.623.623 0 1 1-.277-1.215c3.809-.87 7.076-.496 9.712 1.115a.623.623 0 0 1 .207.857zm1.223-2.722a.78.78 0 0 1-1.072.257c-2.687-1.652-6.785-2.131-9.965-1.166a.78.78 0 0 1-.973-.519.781.781 0 0 1 .52-.973c3.632-1.102 8.147-.568 11.233 1.329a.78.78 0 0 1 .257 1.072zm.105-2.835C14.692 8.95 9.375 8.775 6.297 9.71a.937.937 0 1 1-.543-1.793c3.532-1.072 9.404-.865 13.115 1.338a.937.937 0 0 1-.955 1.612z"/></svg>
+                Spotify
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── Card 4 — EP 03 ── -->
+        <article class="pod-ep-card">
+          <div class="pod-ep-thumb-wrap">
+            <img src="bg image embs/bluebg.jpeg" alt="IoT in Healthcare episode thumbnail" class="pod-ep-thumb" />
+            <span class="pod-ep-num">EP. 03</span>
+            <span class="pod-ep-badge">IoT</span>
+          </div>
+          <div class="pod-ep-body">
+            <h3 class="pod-ep-title">IoT in Healthcare</h3>
+            <div class="pod-ep-meta">
+              <span class="pod-ep-guest">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.582-7 8-7s8 3 8 7"/></svg>
+                Arjun Vijay
+              </span>
+              <span class="pod-ep-duration">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                36 min
+              </span>
+            </div>
+            <p class="pod-ep-desc">Connected medical devices, smart hospital infrastructure, and the data security challenges of healthcare IoT.</p>
+            <div class="pod-ep-waveform" aria-hidden="true">
+              <span style="--h:60%"></span><span style="--h:40%"></span><span style="--h:75%"></span>
+              <span style="--h:55%"></span><span style="--h:85%"></span><span style="--h:45%"></span>
+              <span style="--h:100%"></span><span style="--h:70%"></span><span style="--h:90%"></span>
+              <span style="--h:50%"></span><span style="--h:65%"></span><span style="--h:80%"></span>
+              <span style="--h:45%"></span><span style="--h:60%"></span><span style="--h:35%"></span>
+            </div>
+            <div class="pod-ep-actions">
+              <a href="#" class="pod-ep-btn pod-ep-btn--play" aria-label="Play IoT in Healthcare episode">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg>
+                Play Episode
+              </a>
+              <a href="#" class="pod-ep-btn pod-ep-btn--spotify" aria-label="Listen on Spotify">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424a.623.623 0 0 1-.857.207c-2.348-1.435-5.304-1.76-8.785-.964a.623.623 0 1 1-.277-1.215c3.809-.87 7.076-.496 9.712 1.115a.623.623 0 0 1 .207.857zm1.223-2.722a.78.78 0 0 1-1.072.257c-2.687-1.652-6.785-2.131-9.965-1.166a.78.78 0 0 1-.973-.519.781.781 0 0 1 .52-.973c3.632-1.102 8.147-.568 11.233 1.329a.78.78 0 0 1 .257 1.072zm.105-2.835C14.692 8.95 9.375 8.775 6.297 9.71a.937.937 0 1 1-.543-1.793c3.532-1.072 9.404-.865 13.115 1.338a.937.937 0 0 1-.955 1.612z"/></svg>
+                Spotify
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── Card 5 — EP 02 ── -->
+        <article class="pod-ep-card">
+          <div class="pod-ep-thumb-wrap">
+            <img src="bg image embs/glassdna.jpeg" alt="Rehabilitation Engineering episode thumbnail" class="pod-ep-thumb" />
+            <span class="pod-ep-num">EP. 02</span>
+            <span class="pod-ep-badge">Rehabilitation</span>
+          </div>
+          <div class="pod-ep-body">
+            <h3 class="pod-ep-title">Rehabilitation Engineering</h3>
+            <div class="pod-ep-meta">
+              <span class="pod-ep-guest">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.582-7 8-7s8 3 8 7"/></svg>
+                Dr. Prakash
+              </span>
+              <span class="pod-ep-duration">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                40 min
+              </span>
+            </div>
+            <p class="pod-ep-desc">Engineering assistive technologies and prosthetics that restore mobility and independence to patients.</p>
+            <div class="pod-ep-waveform" aria-hidden="true">
+              <span style="--h:45%"></span><span style="--h:70%"></span><span style="--h:55%"></span>
+              <span style="--h:85%"></span><span style="--h:40%"></span><span style="--h:95%"></span>
+              <span style="--h:65%"></span><span style="--h:80%"></span><span style="--h:50%"></span>
+              <span style="--h:75%"></span><span style="--h:100%"></span><span style="--h:60%"></span>
+              <span style="--h:35%"></span><span style="--h:55%"></span><span style="--h:45%"></span>
+            </div>
+            <div class="pod-ep-actions">
+              <a href="#" class="pod-ep-btn pod-ep-btn--play" aria-label="Play Rehabilitation Engineering episode">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg>
+                Play Episode
+              </a>
+              <a href="#" class="pod-ep-btn pod-ep-btn--spotify" aria-label="Listen on Spotify">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424a.623.623 0 0 1-.857.207c-2.348-1.435-5.304-1.76-8.785-.964a.623.623 0 1 1-.277-1.215c3.809-.87 7.076-.496 9.712 1.115a.623.623 0 0 1 .207.857zm1.223-2.722a.78.78 0 0 1-1.072.257c-2.687-1.652-6.785-2.131-9.965-1.166a.78.78 0 0 1-.973-.519.781.781 0 0 1 .52-.973c3.632-1.102 8.147-.568 11.233 1.329a.78.78 0 0 1 .257 1.072zm.105-2.835C14.692 8.95 9.375 8.775 6.297 9.71a.937.937 0 1 1-.543-1.793c3.532-1.072 9.404-.865 13.115 1.338a.937.937 0 0 1-.955 1.612z"/></svg>
+                Spotify
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── Card 6 — EP 01 ── -->
+        <article class="pod-ep-card">
+          <div class="pod-ep-thumb-wrap">
+            <img src="bg image embs/bluebg.jpeg" alt="Biomedical Startups episode thumbnail" class="pod-ep-thumb" />
+            <span class="pod-ep-num">EP. 01</span>
+            <span class="pod-ep-badge">Startups</span>
+          </div>
+          <div class="pod-ep-body">
+            <h3 class="pod-ep-title">Biomedical Startups</h3>
+            <div class="pod-ep-meta">
+              <span class="pod-ep-guest">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.582-7 8-7s8 3 8 7"/></svg>
+                Nisha Raj
+              </span>
+              <span class="pod-ep-duration">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                33 min
+              </span>
+            </div>
+            <p class="pod-ep-desc">From idea to impact — how student entrepreneurs are building healthcare startups from university labs.</p>
+            <div class="pod-ep-waveform" aria-hidden="true">
+              <span style="--h:50%"></span><span style="--h:80%"></span><span style="--h:60%"></span>
+              <span style="--h:40%"></span><span style="--h:75%"></span><span style="--h:55%"></span>
+              <span style="--h:90%"></span><span style="--h:65%"></span><span style="--h:100%"></span>
+              <span style="--h:45%"></span><span style="--h:70%"></span><span style="--h:85%"></span>
+              <span style="--h:50%"></span><span style="--h:40%"></span><span style="--h:60%"></span>
+            </div>
+            <div class="pod-ep-actions">
+              <a href="#" class="pod-ep-btn pod-ep-btn--play" aria-label="Play Biomedical Startups episode">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg>
+                Play Episode
+              </a>
+              <a href="#" class="pod-ep-btn pod-ep-btn--spotify" aria-label="Listen on Spotify">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424a.623.623 0 0 1-.857.207c-2.348-1.435-5.304-1.76-8.785-.964a.623.623 0 1 1-.277-1.215c3.809-.87 7.076-.496 9.712 1.115a.623.623 0 0 1 .207.857zm1.223-2.722a.78.78 0 0 1-1.072.257c-2.687-1.652-6.785-2.131-9.965-1.166a.78.78 0 0 1-.973-.519.781.781 0 0 1 .52-.973c3.632-1.102 8.147-.568 11.233 1.329a.78.78 0 0 1 .257 1.072zm.105-2.835C14.692 8.95 9.375 8.775 6.297 9.71a.937.937 0 1 1-.543-1.793c3.532-1.072 9.404-.865 13.115 1.338a.937.937 0 0 1-.955 1.612z"/></svg>
+                Spotify
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      <!-- END episode grid -->
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 4 — POPULAR TOPICS
+  ════════════════════════════════════════ -->
+  <section id="pod-topics" class="pod-topics">
+    <div class="pod-topics-inner">
+
+      <!-- Section header -->
+      <div class="pod-topics-header">
+        <span class="pod-topics-label">Discover by Topic</span>
+        <h2 class="pod-topics-title">Popular Topics</h2>
+        <p class="pod-topics-desc">Browse episodes by the subjects that matter most to you.</p>
+      </div>
+
+      <!-- Topic chips -->
+      <div class="pod-topics-chips" role="list" aria-label="Podcast topics">
+
+        <!-- Chip 1 — Artificial Intelligence -->
+        <span class="pod-topic-chip" role="listitem">
+          <span class="pod-topic-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 7h.01M12 7h.01M17 7h.01M7 11h.01M12 11h.01M17 11h.01"/></svg>
+          </span>
+          Artificial Intelligence
+        </span>
+
+        <!-- Chip 2 — Medical Imaging -->
+        <span class="pod-topic-chip" role="listitem">
+          <span class="pod-topic-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="12" r="4"/><path d="M12 8v1M12 15v1M8 12h1M15 12h1"/></svg>
+          </span>
+          Medical Imaging
+        </span>
+
+        <!-- Chip 3 — Biomedical Devices -->
+        <span class="pod-topic-chip" role="listitem">
+          <span class="pod-topic-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18"/></svg>
+          </span>
+          Biomedical Devices
+        </span>
+
+        <!-- Chip 4 — Wearables -->
+        <span class="pod-topic-chip" role="listitem">
+          <span class="pod-topic-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M12 7v5l3 2"/></svg>
+          </span>
+          Wearables
+        </span>
+
+        <!-- Chip 5 — Healthcare IoT -->
+        <span class="pod-topic-chip" role="listitem">
+          <span class="pod-topic-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+          </span>
+          Healthcare IoT
+        </span>
+
+        <!-- Chip 6 — Signal Processing -->
+        <span class="pod-topic-chip" role="listitem">
+          <span class="pod-topic-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 12 6 4 10 18 14 8 18 14 22 12"/></svg>
+          </span>
+          Signal Processing
+        </span>
+
+        <!-- Chip 7 — Clinical Engineering -->
+        <span class="pod-topic-chip" role="listitem">
+          <span class="pod-topic-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </span>
+          Clinical Engineering
+        </span>
+
+        <!-- Chip 8 — Bioinformatics -->
+        <span class="pod-topic-chip" role="listitem">
+          <span class="pod-topic-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3c0 4 4 5 4 9s-4 5-4 9M16 3c0 4-4 5-4 9s4 5 4 9M5 8h14M5 16h14"/></svg>
+          </span>
+          Bioinformatics
+        </span>
+
+        <!-- Chip 9 — Rehabilitation -->
+        <span class="pod-topic-chip" role="listitem">
+          <span class="pod-topic-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7v6M9 10l3 3 3-3M9 17c0 2 1.5 4 3 4s3-2 3-4"/></svg>
+          </span>
+          Rehabilitation
+        </span>
+
+        <!-- Chip 10 — Medical Robotics -->
+        <span class="pod-topic-chip" role="listitem">
+          <span class="pod-topic-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="11" width="10" height="10" rx="1"/><path d="M12 11V7a2 2 0 0 0-4 0v1M17 11V7a2 2 0 0 0-4 0"/><circle cx="9.5" cy="15" r="1" fill="currentColor" stroke="none"/><circle cx="14.5" cy="15" r="1" fill="currentColor" stroke="none"/><path d="M9.5 18h5"/></svg>
+          </span>
+          Medical Robotics
+        </span>
+
+      </div>
+      <!-- END topic chips -->
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 5 — MEET OUR GUESTS
+  ════════════════════════════════════════ -->
+  <section id="pod-guests" class="pod-guests">
+    <div class="pod-guests-inner">
+
+      <!-- Section header -->
+      <div class="pod-guests-header">
+        <span class="pod-guests-label">Our Speakers</span>
+        <h2 class="pod-guests-title">Meet Our Guests</h2>
+        <p class="pod-guests-desc">Researchers, clinicians, engineers and innovators who have joined us to share their expertise and insights.</p>
+      </div>
+
+      <!-- Guests grid -->
+      <div class="pod-guests-grid">
+
+        <!-- Guest 1 — Dr. Ravi Kumar -->
+        <article class="pod-guest-card">
+          <div class="pod-guest-avatar-wrap">
+            <!-- Replace src with guest photo -->
+            <img
+              src="bg image embs/bluebg.jpeg"
+              alt="Dr. Ravi Kumar"
+              class="pod-guest-avatar"
+            />
+          </div>
+          <div class="pod-guest-info">
+            <h3 class="pod-guest-name">Dr. Ravi Kumar</h3>
+            <span class="pod-guest-designation">Neurotechnology Researcher</span>
+            <span class="pod-guest-institution">IIT Madras</span>
+            <p class="pod-guest-bio">Pioneering brain-computer interface research for motor rehabilitation in post-stroke patients.</p>
+            <span class="pod-guest-spotify-badge" aria-label="Podcast guest on Spotify">
+              <!-- Spotify icon -->
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424a.623.623 0 0 1-.857.207c-2.348-1.435-5.304-1.76-8.785-.964a.623.623 0 1 1-.277-1.215c3.809-.87 7.076-.496 9.712 1.115a.623.623 0 0 1 .207.857zm1.223-2.722a.78.78 0 0 1-1.072.257c-2.687-1.652-6.785-2.131-9.965-1.166a.78.78 0 0 1-.973-.519.781.781 0 0 1 .52-.973c3.632-1.102 8.147-.568 11.233 1.329a.78.78 0 0 1 .257 1.072zm.105-2.835C14.692 8.95 9.375 8.775 6.297 9.71a.937.937 0 1 1-.543-1.793c3.532-1.072 9.404-.865 13.115 1.338a.937.937 0 0 1-.955 1.612z"/></svg>
+              Podcast Guest
+            </span>
+          </div>
+        </article>
+
+        <!-- Guest 2 — Prof. Meera Krishnan -->
+        <article class="pod-guest-card">
+          <div class="pod-guest-avatar-wrap">
+            <!-- Replace src with guest photo -->
+            <img
+              src="bg image embs/glassdna.jpeg"
+              alt="Prof. Meera Krishnan"
+              class="pod-guest-avatar"
+            />
+          </div>
+          <div class="pod-guest-info">
+            <h3 class="pod-guest-name">Prof. Meera Krishnan</h3>
+            <span class="pod-guest-designation">Biomedical Engineering Professor</span>
+            <span class="pod-guest-institution">BITS Pilani</span>
+            <p class="pod-guest-bio">Leading research in AI-assisted medical imaging and computational diagnostics for early disease detection.</p>
+            <span class="pod-guest-spotify-badge" aria-label="Podcast guest on Spotify">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424a.623.623 0 0 1-.857.207c-2.348-1.435-5.304-1.76-8.785-.964a.623.623 0 1 1-.277-1.215c3.809-.87 7.076-.496 9.712 1.115a.623.623 0 0 1 .207.857zm1.223-2.722a.78.78 0 0 1-1.072.257c-2.687-1.652-6.785-2.131-9.965-1.166a.78.78 0 0 1-.973-.519.781.781 0 0 1 .52-.973c3.632-1.102 8.147-.568 11.233 1.329a.78.78 0 0 1 .257 1.072zm.105-2.835C14.692 8.95 9.375 8.775 6.297 9.71a.937.937 0 1 1-.543-1.793c3.532-1.072 9.404-.865 13.115 1.338a.937.937 0 0 1-.955 1.612z"/></svg>
+              Podcast Guest
+            </span>
+          </div>
+        </article>
+
+        <!-- Guest 3 — Dr. Ananya Raman -->
+        <article class="pod-guest-card">
+          <div class="pod-guest-avatar-wrap">
+            <!-- Replace src with guest photo -->
+            <img
+              src="bg image embs/network.jpeg"
+              alt="Dr. Ananya Raman"
+              class="pod-guest-avatar"
+            />
+          </div>
+          <div class="pod-guest-info">
+            <h3 class="pod-guest-name">Dr. Ananya Raman</h3>
+            <span class="pod-guest-designation">Healthcare AI Scientist</span>
+            <span class="pod-guest-institution">AIIMS New Delhi</span>
+            <p class="pod-guest-bio">Bridging clinical practice and machine learning to deploy AI diagnostic tools in real hospital environments.</p>
+            <span class="pod-guest-spotify-badge" aria-label="Podcast guest on Spotify">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424a.623.623 0 0 1-.857.207c-2.348-1.435-5.304-1.76-8.785-.964a.623.623 0 1 1-.277-1.215c3.809-.87 7.076-.496 9.712 1.115a.623.623 0 0 1 .207.857zm1.223-2.722a.78.78 0 0 1-1.072.257c-2.687-1.652-6.785-2.131-9.965-1.166a.78.78 0 0 1-.973-.519.781.781 0 0 1 .52-.973c3.632-1.102 8.147-.568 11.233 1.329a.78.78 0 0 1 .257 1.072zm.105-2.835C14.692 8.95 9.375 8.775 6.297 9.71a.937.937 0 1 1-.543-1.793c3.532-1.072 9.404-.865 13.115 1.338a.937.937 0 0 1-.955 1.612z"/></svg>
+              Podcast Guest
+            </span>
+          </div>
+        </article>
+
+        <!-- Guest 4 — Arjun Vijay -->
+        <article class="pod-guest-card">
+          <div class="pod-guest-avatar-wrap">
+            <!-- Replace src with guest photo -->
+            <img
+              src="bg image embs/heart.jpeg"
+              alt="Arjun Vijay"
+              class="pod-guest-avatar"
+            />
+          </div>
+          <div class="pod-guest-info">
+            <h3 class="pod-guest-name">Arjun Vijay</h3>
+            <span class="pod-guest-designation">IoT Healthcare Engineer</span>
+            <span class="pod-guest-institution">KPR Institute of Engineering</span>
+            <p class="pod-guest-bio">Designing connected medical device ecosystems that enable real-time remote patient monitoring at scale.</p>
+            <span class="pod-guest-spotify-badge" aria-label="Podcast guest on Spotify">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424a.623.623 0 0 1-.857.207c-2.348-1.435-5.304-1.76-8.785-.964a.623.623 0 1 1-.277-1.215c3.809-.87 7.076-.496 9.712 1.115a.623.623 0 0 1 .207.857zm1.223-2.722a.78.78 0 0 1-1.072.257c-2.687-1.652-6.785-2.131-9.965-1.166a.78.78 0 0 1-.973-.519.781.781 0 0 1 .52-.973c3.632-1.102 8.147-.568 11.233 1.329a.78.78 0 0 1 .257 1.072zm.105-2.835C14.692 8.95 9.375 8.775 6.297 9.71a.937.937 0 1 1-.543-1.793c3.532-1.072 9.404-.865 13.115 1.338a.937.937 0 0 1-.955 1.612z"/></svg>
+              Podcast Guest
+            </span>
+          </div>
+        </article>
+
+      </div>
+      <!-- END guests grid -->
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 6 — WHY LISTEN
+  ════════════════════════════════════════ -->
+  <section id="pod-why">
+    <h2>Why Listen?</h2>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 7 — SUBSCRIBE
+  ════════════════════════════════════════ -->
+  <section id="pod-subscribe" class="pod-subscribe">
+    <div class="pod-subscribe-inner">
+
+      <span class="pod-subscribe-label">Stay Updated</span>
+      <h2 class="pod-subscribe-title">Never Miss an Episode</h2>
+      <p class="pod-subscribe-desc">Get notified the moment a new conversation drops. Join our listener community and stay at the forefront of biomedical engineering and healthcare innovation.</p>
+
+      <!-- Email form -->
+      <form class="pod-subscribe-form" onsubmit="return false;" aria-label="Subscribe to podcast updates">
+        <div class="pod-subscribe-field">
+          <label for="pod-email" class="pod-subscribe-field-label">Email address</label>
+          <div class="pod-subscribe-input-wrap">
+            <span class="pod-subscribe-input-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+            </span>
+            <input
+              type="email"
+              id="pod-email"
+              name="email"
+              class="pod-subscribe-input"
+              placeholder="Enter your email address"
+              autocomplete="email"
+              required
+            />
+          </div>
+        </div>
+        <button type="submit" class="pod-subscribe-btn">
+          Subscribe
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </form>
+
+      <!-- Divider -->
+      <div class="pod-subscribe-divider" aria-hidden="true">
+        <span></span>
+        <span class="pod-subscribe-divider-text">or follow on</span>
+        <span></span>
+      </div>
+
+      <!-- Spotify follow button -->
+      <a href="#" class="pod-subscribe-spotify" aria-label="Follow IEEE EMBS Podcast on Spotify">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424a.623.623 0 0 1-.857.207c-2.348-1.435-5.304-1.76-8.785-.964a.623.623 0 1 1-.277-1.215c3.809-.87 7.076-.496 9.712 1.115a.623.623 0 0 1 .207.857zm1.223-2.722a.78.78 0 0 1-1.072.257c-2.687-1.652-6.785-2.131-9.965-1.166a.78.78 0 0 1-.973-.519.781.781 0 0 1 .52-.973c3.632-1.102 8.147-.568 11.233 1.329a.78.78 0 0 1 .257 1.072zm.105-2.835C14.692 8.95 9.375 8.775 6.297 9.71a.937.937 0 1 1-.543-1.793c3.532-1.072 9.404-.865 13.115 1.338a.937.937 0 0 1-.955 1.612z"/></svg>
+        Follow on Spotify
+      </a>
+
+      <!-- Release cadence note -->
+      <p class="pod-subscribe-note">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        New episodes released every fortnight.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 8 — BECOME A GUEST
+  ════════════════════════════════════════ -->
+  <section id="pod-become-guest" class="pod-become">
+
+    <!-- Decorative background orbs (CSS only, no content) -->
+    <div class="pod-become-orb pod-become-orb--left"  aria-hidden="true"></div>
+    <div class="pod-become-orb pod-become-orb--right" aria-hidden="true"></div>
+
+    <div class="pod-become-inner">
+
+      <!-- Microphone illustration -->
+      <div class="pod-become-illus" aria-hidden="true">
+        <!-- Replace this SVG with <img src="your-mic-illustration.png" alt=""> -->
+        <svg class="pod-become-mic-svg" viewBox="0 0 200 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Stand base -->
+          <rect x="75" y="218" width="50" height="8" rx="4" fill="rgba(0,169,157,0.4)"/>
+          <!-- Stand pole -->
+          <rect x="94" y="178" width="12" height="42" rx="6" fill="rgba(0,169,157,0.35)"/>
+          <!-- Arm left -->
+          <path d="M100 178 C100 148 50 148 50 118" stroke="rgba(0,169,157,0.45)" stroke-width="6" stroke-linecap="round" fill="none"/>
+          <!-- Arm right -->
+          <path d="M100 178 C100 148 150 148 150 118" stroke="rgba(107,45,139,0.45)" stroke-width="6" stroke-linecap="round" fill="none"/>
+          <!-- Mic body -->
+          <rect x="68" y="30" width="64" height="112" rx="32" fill="url(#becomeGrad)"/>
+          <!-- Grille lines -->
+          <line x1="80" y1="62"  x2="120" y2="62"  stroke="rgba(255,255,255,0.14)" stroke-width="2" stroke-linecap="round"/>
+          <line x1="77" y1="76"  x2="123" y2="76"  stroke="rgba(255,255,255,0.14)" stroke-width="2" stroke-linecap="round"/>
+          <line x1="77" y1="90"  x2="123" y2="90"  stroke="rgba(255,255,255,0.14)" stroke-width="2" stroke-linecap="round"/>
+          <line x1="77" y1="104" x2="123" y2="104" stroke="rgba(255,255,255,0.14)" stroke-width="2" stroke-linecap="round"/>
+          <line x1="80" y1="118" x2="120" y2="118" stroke="rgba(255,255,255,0.14)" stroke-width="2" stroke-linecap="round"/>
+          <!-- Highlight -->
+          <rect x="78" y="40" width="16" height="38" rx="8" fill="rgba(255,255,255,0.1)"/>
+          <!-- Glow ring -->
+          <ellipse cx="100" cy="86" rx="44" ry="68" stroke="rgba(0,169,157,0.18)" stroke-width="12" fill="none"/>
+          <defs>
+            <linearGradient id="becomeGrad" x1="68" y1="30" x2="132" y2="142" gradientUnits="userSpaceOnUse">
+              <stop offset="0%"   stop-color="#6B2D8B"/>
+              <stop offset="100%" stop-color="#00A99D"/>
+            </linearGradient>
+          </defs>
+        </svg>
+
+        <!-- Floating sound rings -->
+        <span class="pod-become-ring pod-become-ring--1" aria-hidden="true"></span>
+        <span class="pod-become-ring pod-become-ring--2" aria-hidden="true"></span>
+        <span class="pod-become-ring pod-become-ring--3" aria-hidden="true"></span>
+      </div>
+
+      <!-- Text content -->
+      <div class="pod-become-content">
+
+        <span class="pod-become-label">Be Our Next Guest</span>
+
+        <h2 class="pod-become-title">Want to Share Your Research?</h2>
+
+        <p class="pod-become-desc">We welcome students, faculty members, researchers, alumni, clinicians and industry professionals to join us on the EMBS Podcast. Whether you have published groundbreaking research, built a healthcare startup, or are working on a project that could change lives &mdash; your story deserves to be heard. Share your expertise with a growing community of biomedical engineering enthusiasts.</p>
+
+        <!-- Who can apply list -->
+        <ul class="pod-become-list" aria-label="Who can apply">
+          <li class="pod-become-list-item">
+            <span class="pod-become-list-icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            Students &amp; Research Scholars
+          </li>
+          <li class="pod-become-list-item">
+            <span class="pod-become-list-icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            Faculty &amp; Academic Professionals
+          </li>
+          <li class="pod-become-list-item">
+            <span class="pod-become-list-icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            Clinicians &amp; Healthcare Practitioners
+          </li>
+          <li class="pod-become-list-item">
+            <span class="pod-become-list-icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            Industry Experts &amp; Innovators
+          </li>
+        </ul>
+
+        <!-- CTA buttons -->
+        <div class="pod-become-actions">
+          <a href="#" class="pod-become-btn pod-become-btn--primary" aria-label="Apply as a podcast guest">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="11" rx="3"/><path d="M5 10a7 7 0 0 0 14 0"/><path d="M12 17v5M9 22h6"/></svg>
+            Apply as Guest
+          </a>
+          <a href="#" class="pod-become-btn pod-become-btn--secondary" aria-label="Suggest a podcast topic">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Suggest a Topic
+          </a>
+        </div>
+
+      </div>
+      <!-- END text content -->
+
+    </div>
+  </section>
+
+</main>
+
+<script src="navbar.js" defer></script>
+<script src="announceBar.js" defer></script>
+<script src="newsletter.js" defer></script>
+
+</body>
+</html>

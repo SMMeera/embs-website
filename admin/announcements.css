@@ -1,0 +1,223 @@
+/* ── Stats Bar ── */
+.ann-stats {
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.1rem 1.75rem;
+}
+.ann-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  flex: 1;
+  text-align: center;
+}
+.ann-stat-val {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+}
+.ann-stat-val--teal  { color: var(--teal); }
+.ann-stat-val--amber { color: #f5a623; }
+.ann-stat-val--red   { color: #f87171; }
+.ann-stat-val--muted { color: rgba(200,210,230,0.35); }
+.ann-stat-lbl {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.ann-stat-div {
+  width: 1px;
+  height: 36px;
+  background: var(--border);
+  flex-shrink: 0;
+  margin: 0 0.5rem;
+}
+
+/* ── Textarea ── */
+.ann-textarea { min-height: 120px; }
+
+/* ── Attachment zone ── */
+.ann-attach-zone {
+  position: relative;
+  border: 1.5px dashed rgba(107,45,139,0.3);
+  border-radius: 10px;
+  background: rgba(107,45,139,0.03);
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  overflow: hidden;
+}
+.ann-attach-zone:hover { border-color: rgba(107,45,139,0.55); background: rgba(107,45,139,0.07); }
+.ann-attach-input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.ann-attach-inner {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.75rem 1rem;
+  pointer-events: none;
+  width: 100%;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+.ann-attach-hint {
+  font-size: 0.65rem;
+  color: rgba(200,210,230,0.3);
+  margin-left: auto;
+}
+.ann-attach-file {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  color: var(--teal);
+  font-size: 0.8rem;
+  font-weight: 500;
+  z-index: 3;
+}
+.ann-attach-file svg { flex-shrink: 0; }
+.ann-attach-file span { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ann-attach-remove {
+  background: rgba(239,68,68,0.1);
+  border: 1px solid rgba(239,68,68,0.25);
+  border-radius: 6px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f87171;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.15s;
+  z-index: 4;
+}
+.ann-attach-remove:hover { background: rgba(239,68,68,0.25); }
+
+/* ── Table columns ── */
+.col-ann-title    { width: 30%; }
+.col-ann-priority { width: 10%; }
+.col-ann-audience { width: 13%; }
+.col-ann-expiry   { width: 11%; }
+.col-ann-attach   { width: 8%; }
+
+/* ── Title cell ── */
+.td-ann-title {
+  font-weight: 600;
+  font-size: 0.83rem;
+  color: var(--text-primary);
+  line-height: 1.35;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 260px;
+}
+.td-ann-body {
+  font-size: 0.68rem;
+  color: rgba(200,210,230,0.3);
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 260px;
+}
+
+/* ── Priority badge ── */
+.priority-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.22rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.67rem;
+  font-weight: 700;
+  white-space: nowrap;
+  letter-spacing: 0.03em;
+}
+.priority-badge::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.priority-badge--urgent { background: rgba(239,68,68,0.12);  color: #f87171; border: 1px solid rgba(239,68,68,0.28); }
+.priority-badge--urgent::before { background: #f87171; box-shadow: 0 0 5px rgba(248,113,113,0.7); }
+.priority-badge--high   { background: rgba(245,166,35,0.1);  color: #f5c842; border: 1px solid rgba(245,166,35,0.28); }
+.priority-badge--high::before   { background: #f5c842; box-shadow: 0 0 5px rgba(245,200,66,0.5); }
+.priority-badge--normal { background: rgba(0,169,157,0.1);   color: var(--teal); border: 1px solid rgba(0,169,157,0.25); }
+.priority-badge--normal::before { background: var(--teal); }
+.priority-badge--low    { background: rgba(200,210,230,0.06); color: rgba(200,210,230,0.4); border: 1px solid rgba(200,210,230,0.12); }
+.priority-badge--low::before    { background: rgba(200,210,230,0.35); }
+
+/* ── Audience badge ── */
+.audience-badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.67rem;
+  font-weight: 600;
+  white-space: nowrap;
+  background: rgba(107,45,139,0.1);
+  color: #c084e8;
+  border: 1px solid rgba(107,45,139,0.25);
+}
+.audience-badge--all       { background: rgba(107,45,139,0.1);  color: #c084e8;      border-color: rgba(107,45,139,0.25); }
+.audience-badge--executive { background: rgba(245,166,35,0.1);  color: #f5c842;      border-color: rgba(245,166,35,0.25); }
+.audience-badge--core      { background: rgba(0,169,157,0.1);   color: var(--teal);  border-color: rgba(0,169,157,0.25); }
+.audience-badge--volunteers{ background: rgba(16,185,129,0.1);  color: #6ee7b7;      border-color: rgba(16,185,129,0.2); }
+.audience-badge--public    { background: rgba(59,130,246,0.1);  color: #7eb8f7;      border-color: rgba(59,130,246,0.25); }
+
+/* ── Expiry cell ── */
+.td-expiry        { font-size: 0.78rem; color: var(--text-muted); }
+.td-expiry--soon  { color: #f5c842; font-weight: 600; }
+.td-expiry--past  { color: rgba(200,210,230,0.3); text-decoration: line-through; }
+.td-expiry--none  { color: rgba(200,210,230,0.2); font-style: italic; }
+
+/* ── Attachment icon ── */
+.td-attach-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.03);
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.td-attach-link:hover { background: rgba(59,130,246,0.12); color: #7eb8f7; border-color: rgba(59,130,246,0.3); }
+.td-no-attach { color: rgba(200,210,230,0.15); font-size: 0.7rem; }
+
+/* ── Responsive ── */
+@media (max-width: 1000px) {
+  .col-ann-audience, .col-ann-attach { display: none; }
+}
+@media (max-width: 768px) {
+  .col-ann-expiry { display: none; }
+}
+@media (max-width: 900px) {
+  .ann-stats { flex-wrap: wrap; gap: 1rem; }
+  .ann-stat-div { display: none; }
+  .ann-stat { flex: 1 1 40%; }
+}

@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Settings — IEEE EMBS Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="dashboard.css" />
+  <link rel="stylesheet" href="settings.css" />
+</head>
+<body>
+
+  <!-- ── Sidebar ── -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-top">
+      <div class="sidebar-brand">
+        <img src="../logo-cropped.png" alt="IEEE EMBS" class="sidebar-logo" />
+        <div class="sidebar-brand-text">
+          <span class="sidebar-brand-title">IEEE EMBS</span>
+          <span class="sidebar-brand-sub">Admin Panel</span>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="sidebar-link">
+          <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="14" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="14" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.6"/></svg>
+          Dashboard
+        </a>
+        <a href="events.html" class="sidebar-link">
+          <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.6"/><line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" stroke-width="1.6"/><line x1="8" y1="3" x2="8" y2="7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><line x1="16" y1="3" x2="16" y2="7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          Events
+        </a>
+        <a href="achievements.html" class="sidebar-link">
+          <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none"><polygon points="12,3 15,9 21,9 16.5,13.5 18.5,20 12,16 5.5,20 7.5,13.5 3,9 9,9" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          Achievements
+        </a>
+        <a href="blog.html" class="sidebar-link">
+          <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="17" rx="2" stroke="currentColor" stroke-width="1.6"/><line x1="7" y1="9" x2="17" y2="9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="7" y1="13" x2="17" y2="13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="7" y1="17" x2="12" y2="17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Blogs
+        </a>
+        <a href="podcast.html" class="sidebar-link">
+          <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><polygon points="10,8.5 17,12 10,15.5" fill="currentColor"/></svg>
+          Podcast
+        </a>
+        <a href="projects.html" class="sidebar-link">
+          <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none"><rect x="2" y="7" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" stroke="currentColor" stroke-width="1.6"/><line x1="12" y1="12" x2="12" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="10" y1="14" x2="14" y2="14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Projects
+        </a>
+        <a href="gallery.html" class="sidebar-link">
+          <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="13" y="3" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="13" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="13" y="13" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.6"/></svg>
+          Gallery
+        </a>
+        <a href="members.html" class="sidebar-link">
+          <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="1.6"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><line x1="19" y1="8" x2="19" y2="14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><line x1="16" y1="11" x2="22" y2="11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          Members
+        </a>
+        <a href="announcements.html" class="sidebar-link">
+          <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.73 21a2 2 0 0 1-3.46 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          Announcements
+        </a>
+        <a href="settings.html" class="sidebar-link active">
+          <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" stroke="currentColor" stroke-width="1.6"/></svg>
+          Settings
+        </a>
+      </nav>
+    </div>
+    <div class="sidebar-bottom">
+      <div class="sidebar-user">
+        <div class="sidebar-avatar">A</div>
+        <div class="sidebar-user-info">
+          <span class="sidebar-user-name">Admin</span>
+          <span class="sidebar-user-role">Logged in as Admin</span>
+        </div>
+      </div>
+      <a href="../index.html" class="sidebar-viewsite" target="_blank">
+        <svg viewBox="0 0 24 24" fill="none" width="13" height="13"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 3c-2.5 3-4 5.5-4 9s1.5 6 4 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M12 3c2.5 3 4 5.5 4 9s-1.5 6-4 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+        View Site
+      </a>
+    </div>
+  </aside>
+
+  <!-- ── Main Wrapper ── -->
+  <div class="main-wrapper">
+
+    <!-- ── Top Navbar ── -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="topbar-nav">
+          <a href="dashboard.html" class="topbar-nav-link">Overview</a>
+          <a href="#" class="topbar-nav-link active">Settings</a>
+        </nav>
+      </div>
+      <div class="topbar-right">
+        <button class="topbar-btn" aria-label="Notices">
+          <svg viewBox="0 0 24 24" fill="none" width="17" height="17"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.73 21a2 2 0 0 1-3.46 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <span class="topbar-badge">3</span>
+        </button>
+        <button class="topbar-profile" aria-label="Admin profile">
+          <div class="topbar-avatar">A</div>
+          <span class="topbar-profile-name">Admin</span>
+          <svg viewBox="0 0 10 10" fill="none" width="10" height="10"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- ── Settings Content ── -->
+    <main class="content">
+
+      <div class="content-header">
+        <div>
+          <span class="content-label">Admin Panel</span>
+          <h1 class="content-title">Settings</h1>
+        </div>
+      </div>
+
+      <!-- ── Admin Profile Card ── -->
+      <div class="panel settings-card">
+        <div class="panel-header">
+          <div class="panel-header-left">
+            <span class="panel-title">Admin Profile</span>
+            <span class="panel-subtitle">Update your personal information</span>
+          </div>
+        </div>
+
+        <div class="settings-card-body">
+
+          <!-- Avatar section -->
+          <div class="profile-avatar-section">
+            <div class="profile-avatar-wrap">
+              <div class="profile-avatar" id="profileAvatarDisplay">
+                <span id="profileAvatarInitial">A</span>
+                <img id="profileAvatarImg" src="" alt="Profile" style="display:none;" />
+              </div>
+              <div class="profile-avatar-meta">
+                <span class="profile-avatar-name" id="profileDisplayName">Arjun Menon</span>
+                <span class="profile-avatar-role">Administrator</span>
+              </div>
+            </div>
+            <div class="profile-upload-wrap">
+              <input type="file" id="profilePicInput" accept="image/*" style="display:none;" />
+              <button class="btn-upload-pic" id="uploadPicBtn">
+                <svg viewBox="0 0 24 24" fill="none" width="14" height="14"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><polyline points="17,8 12,3 7,8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><line x1="12" y1="3" x2="12" y2="15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                Upload Picture
+              </button>
+              <span class="upload-hint-text">JPG, PNG or GIF · Max 2 MB</span>
+            </div>
+          </div>
+
+          <!-- Form fields -->
+          <div class="settings-form-grid">
+            <div class="settings-form-group">
+              <label class="settings-label">Full Name</label>
+              <input type="text" class="settings-input" id="profileName" value="Arjun Menon" />
+            </div>
+            <div class="settings-form-group">
+              <label class="settings-label">Email Address</label>
+              <input type="email" class="settings-input" id="profileEmail" value="arjun.menon@ieeeembs.org" />
+            </div>
+            <div class="settings-form-group">
+              <label class="settings-label">Phone Number</label>
+              <input type="tel" class="settings-input" id="profilePhone" value="+91 98765 43210" />
+            </div>
+            <div class="settings-form-group">
+              <label class="settings-label">Designation</label>
+              <input type="text" class="settings-input" id="profileDesignation" value="Chapter Chairperson" />
+            </div>
+          </div>
+
+          <!-- Save button -->
+          <div class="settings-card-footer">
+            <button class="btn-save-settings" id="saveProfileBtn">
+              <svg viewBox="0 0 24 24" fill="none" width="14" height="14"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z" stroke="currentColor" stroke-width="1.6"/><polyline points="17,21 17,13 7,13 7,21" stroke="currentColor" stroke-width="1.6"/><polyline points="7,3 7,8 15,8" stroke="currentColor" stroke-width="1.6"/></svg>
+              Save Changes
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Website Information Card ── -->
+      <div class="panel settings-card">
+        <div class="panel-header">
+          <div class="panel-header-left">
+            <span class="panel-title">Website Information</span>
+            <span class="panel-subtitle">General details about your chapter website</span>
+          </div>
+        </div>
+        <div class="settings-card-body">
+          <div class="settings-form-grid">
+            <div class="settings-form-group">
+              <label class="settings-label">Website Name</label>
+              <input type="text" class="settings-input" id="siteName" value="IEEE EMBS Student Chapter" />
+            </div>
+            <div class="settings-form-group">
+              <label class="settings-label">IEEE Chapter Name</label>
+              <input type="text" class="settings-input" id="chapterName" value="IEEE Engineering in Medicine and Biology Society" />
+            </div>
+            <div class="settings-form-group">
+              <label class="settings-label">Organization</label>
+              <input type="text" class="settings-input" id="orgName" value="College of Engineering, Trivandrum" />
+            </div>
+            <div class="settings-form-group">
+              <label class="settings-label">Contact Email</label>
+              <input type="email" class="settings-input" id="siteEmail" value="ieeeembs.cet@gmail.com" />
+            </div>
+            <div class="settings-form-group">
+              <label class="settings-label">Contact Phone</label>
+              <input type="tel" class="settings-input" id="sitePhone" value="+91 471 2515 565" />
+            </div>
+            <div class="settings-form-group">
+              <label class="settings-label">Google Maps Link</label>
+              <input type="url" class="settings-input" id="mapsLink" value="https://maps.google.com/?q=College+of+Engineering+Trivandrum" />
+            </div>
+            <div class="settings-form-group settings-span-full">
+              <label class="settings-label">Address</label>
+              <input type="text" class="settings-input" id="siteAddress" value="College of Engineering, Thiruvananthapuram, Kerala 695016" />
+            </div>
+            <div class="settings-form-group settings-span-full">
+              <label class="settings-label">Website Description</label>
+              <textarea class="settings-input settings-textarea" id="siteDesc" rows="3">IEEE EMBS Student Chapter at CET is dedicated to advancing biomedical engineering through events, research, and community outreach.</textarea>
+            </div>
+          </div>
+          <div class="settings-card-footer">
+            <button class="btn-save-settings" id="saveSiteBtn">
+              <svg viewBox="0 0 24 24" fill="none" width="14" height="14"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z" stroke="currentColor" stroke-width="1.6"/><polyline points="17,21 17,13 7,13 7,21" stroke="currentColor" stroke-width="1.6"/><polyline points="7,3 7,8 15,8" stroke="currentColor" stroke-width="1.6"/></svg>
+              Save Changes
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Appearance Settings Card ── -->
+      <div class="panel settings-card">
+        <div class="panel-header">
+          <div class="panel-header-left">
+            <span class="panel-title">Appearance</span>
+            <span class="panel-subtitle">Customize the look and feel of the admin panel</span>
+          </div>
+        </div>
+        <div class="settings-card-body">
+
+          <!-- Theme selector -->
+          <div class="appearance-section">
+            <span class="appearance-section-title">Theme</span>
+            <div class="theme-selector">
+              <label class="theme-option" id="themeLight">
+                <input type="radio" name="theme" value="light" />
+                <div class="theme-card">
+                  <div class="theme-preview theme-preview--light">
+                    <div class="tp-sidebar"></div>
+                    <div class="tp-main">
+                      <div class="tp-bar"></div>
+                      <div class="tp-content"></div>
+                    </div>
+                  </div>
+                  <span class="theme-label">Light</span>
+                </div>
+              </label>
+              <label class="theme-option" id="themeDark">
+                <input type="radio" name="theme" value="dark" checked />
+                <div class="theme-card">
+                  <div class="theme-preview theme-preview--dark">
+                    <div class="tp-sidebar"></div>
+                    <div class="tp-main">
+                      <div class="tp-bar"></div>
+                      <div class="tp-content"></div>
+                    </div>
+                  </div>
+                  <span class="theme-label">Dark</span>
+                </div>
+              </label>
+              <label class="theme-option" id="themeSystem">
+                <input type="radio" name="theme" value="system" />
+                <div class="theme-card">
+                  <div class="theme-preview theme-preview--system">
+                    <div class="tp-sidebar"></div>
+                    <div class="tp-main">
+                      <div class="tp-bar"></div>
+                      <div class="tp-content"></div>
+                    </div>
+                  </div>
+                  <span class="theme-label">System Default</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Accent color -->
+          <div class="appearance-section">
+            <span class="appearance-section-title">Primary Accent Color</span>
+            <div class="accent-row">
+              <div class="accent-swatches">
+                <button class="accent-swatch accent-swatch--active" data-color="#6B2D8B" style="background:#6B2D8B;" title="Purple"></button>
+                <button class="accent-swatch" data-color="#00A99D" style="background:#00A99D;" title="Teal"></button>
+                <button class="accent-swatch" data-color="#3b82f6" style="background:#3b82f6;" title="Blue"></button>
+                <button class="accent-swatch" data-color="#f5a623" style="background:#f5a623;" title="Amber"></button>
+                <button class="accent-swatch" data-color="#ef4444" style="background:#ef4444;" title="Red"></button>
+                <button class="accent-swatch" data-color="#22c55e" style="background:#22c55e;" title="Green"></button>
+              </div>
+              <div class="accent-custom-wrap">
+                <label class="settings-label" style="text-transform:none;letter-spacing:0;">Custom</label>
+                <input type="color" class="accent-color-input" id="accentColorPicker" value="#6B2D8B" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Toggles -->
+          <div class="appearance-section">
+            <span class="appearance-section-title">Interface Options</span>
+            <div class="toggle-list">
+
+              <div class="toggle-row">
+                <div class="toggle-info">
+                  <span class="toggle-title">Sidebar Collapse</span>
+                  <span class="toggle-desc">Start with the sidebar collapsed by default</span>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="toggleSidebar" />
+                  <span class="switch-track"><span class="switch-thumb"></span></span>
+                </label>
+              </div>
+
+              <div class="toggle-row">
+                <div class="toggle-info">
+                  <span class="toggle-title">Enable Animations</span>
+                  <span class="toggle-desc">Smooth transitions and micro-interactions</span>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="toggleAnimations" checked />
+                  <span class="switch-track"><span class="switch-thumb"></span></span>
+                </label>
+              </div>
+
+              <div class="toggle-row">
+                <div class="toggle-info">
+                  <span class="toggle-title">Glassmorphism</span>
+                  <span class="toggle-desc">Frosted glass effect on panels and cards</span>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="toggleGlass" checked />
+                  <span class="switch-track"><span class="switch-thumb"></span></span>
+                </label>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="settings-card-footer">
+            <button class="btn-save-settings" id="saveAppearanceBtn">
+              <svg viewBox="0 0 24 24" fill="none" width="14" height="14"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z" stroke="currentColor" stroke-width="1.6"/><polyline points="17,21 17,13 7,13 7,21" stroke="currentColor" stroke-width="1.6"/><polyline points="7,3 7,8 15,8" stroke="currentColor" stroke-width="1.6"/></svg>
+              Save Appearance
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Change Password Card ── -->
+      <div class="panel settings-card">
+        <div class="panel-header">
+          <div class="panel-header-left">
+            <span class="panel-title">Change Password</span>
+            <span class="panel-subtitle">Update your account password</span>
+          </div>
+        </div>
+
+        <div class="settings-card-body">
+          <div class="pwd-form">
+
+            <!-- Current Password -->
+            <div class="settings-form-group">
+              <label class="settings-label">Current Password</label>
+              <div class="pwd-input-wrap">
+                <input type="password" class="settings-input" id="currentPwd" placeholder="Enter current password" />
+                <button type="button" class="pwd-toggle" data-target="currentPwd" aria-label="Toggle visibility">
+                  <svg class="eye-icon eye-show" viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/></svg>
+                  <svg class="eye-icon eye-hide" viewBox="0 0 24 24" fill="none" width="16" height="16" style="display:none;"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><line x1="1" y1="1" x2="23" y2="23" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                </button>
+              </div>
+              <span class="field-error" id="currentPwdErr"></span>
+            </div>
+
+            <!-- New Password -->
+            <div class="settings-form-group">
+              <label class="settings-label">New Password</label>
+              <div class="pwd-input-wrap">
+                <input type="password" class="settings-input" id="newPwd" placeholder="Enter new password" />
+                <button type="button" class="pwd-toggle" data-target="newPwd" aria-label="Toggle visibility">
+                  <svg class="eye-icon eye-show" viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/></svg>
+                  <svg class="eye-icon eye-hide" viewBox="0 0 24 24" fill="none" width="16" height="16" style="display:none;"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><line x1="1" y1="1" x2="23" y2="23" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                </button>
+              </div>
+              <div class="pwd-strength" id="pwdStrengthWrap" style="display:none;">
+                <div class="pwd-strength-bars">
+                  <span class="pwd-bar" id="bar1"></span>
+                  <span class="pwd-bar" id="bar2"></span>
+                  <span class="pwd-bar" id="bar3"></span>
+                  <span class="pwd-bar" id="bar4"></span>
+                </div>
+                <span class="pwd-strength-label" id="pwdStrengthLabel"></span>
+              </div>
+              <span class="field-error" id="newPwdErr"></span>
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="settings-form-group">
+              <label class="settings-label">Confirm Password</label>
+              <div class="pwd-input-wrap">
+                <input type="password" class="settings-input" id="confirmPwd" placeholder="Re-enter new password" />
+                <button type="button" class="pwd-toggle" data-target="confirmPwd" aria-label="Toggle visibility">
+                  <svg class="eye-icon eye-show" viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/></svg>
+                  <svg class="eye-icon eye-hide" viewBox="0 0 24 24" fill="none" width="16" height="16" style="display:none;"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><line x1="1" y1="1" x2="23" y2="23" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                </button>
+              </div>
+              <span class="field-error" id="confirmPwdErr"></span>
+            </div>
+
+          </div>
+
+          <div class="settings-card-footer">
+            <button class="btn-save-settings" id="savePwdBtn">
+              <svg viewBox="0 0 24 24" fill="none" width="14" height="14"><rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              Save Password
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Social Media & Branding Card ── -->
+      <div class="panel settings-card settings-card--wide">
+        <div class="panel-header">
+          <div class="panel-header-left">
+            <span class="panel-title">Social Media &amp; Branding</span>
+            <span class="panel-subtitle">Links, logo and favicon for your chapter</span>
+          </div>
+        </div>
+        <div class="settings-card-body">
+
+          <!-- Social URLs -->
+          <div class="settings-form-grid">
+            <div class="settings-form-group">
+              <label class="settings-label social-lbl">
+                <svg viewBox="0 0 24 24" fill="none" width="13" height="13"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                Facebook URL
+              </label>
+              <input type="url" class="settings-input" id="fbUrl" value="https://facebook.com/ieeeembscet" />
+            </div>
+            <div class="settings-form-group">
+              <label class="settings-label social-lbl">
+                <svg viewBox="0 0 24 24" fill="none" width="13" height="13"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+                Instagram URL
+              </label>
+              <input type="url" class="settings-input" id="igUrl" value="https://instagram.com/ieeeembscet" />
+            </div>
+            <div class="settings-form-group">
+              <label class="settings-label social-lbl">
+                <svg viewBox="0 0 24 24" fill="none" width="13" height="13"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="1.6"/><rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="1.6"/><circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.6"/></svg>
+                LinkedIn URL
+              </label>
+              <input type="url" class="settings-input" id="liUrl" value="https://linkedin.com/company/ieeeembscet" />
+            </div>
+            <div class="settings-form-group">
+              <label class="settings-label social-lbl">
+                <svg viewBox="0 0 24 24" fill="none" width="13" height="13"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" stroke="currentColor" stroke-width="1.6"/><polygon points="9.75,15.02 15.5,12 9.75,8.98" fill="currentColor"/></svg>
+                YouTube URL
+              </label>
+              <input type="url" class="settings-input" id="ytUrl" value="https://youtube.com/@ieeeembscet" />
+            </div>
+            <div class="settings-form-group">
+              <label class="settings-label social-lbl">
+                <svg viewBox="0 0 24 24" fill="none" width="13" height="13"><path d="M4 4l16 16M4 20L20 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                X (Twitter) URL
+              </label>
+              <input type="url" class="settings-input" id="twUrl" value="https://x.com/ieeeembscet" />
+            </div>
+            <div class="settings-form-group">
+              <label class="settings-label social-lbl">
+                <svg viewBox="0 0 24 24" fill="none" width="13" height="13"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 3c-2.5 3-4 5.5-4 9s1.5 6 4 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M12 3c2.5 3 4 5.5 4 9s-1.5 6-4 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+                Website URL
+              </label>
+              <input type="url" class="settings-input" id="webUrl" value="https://ieeeembscet.org" />
+            </div>
+          </div>
+
+          <!-- Uploads + Preview -->
+          <div class="branding-row">
+
+            <!-- Logo upload -->
+            <div class="branding-upload-block">
+              <span class="settings-label">Logo</span>
+              <div class="branding-zone" id="logoZone">
+                <input type="file" id="logoInput" accept="image/*" style="display:none;" />
+                <div class="branding-zone-inner" id="logoInner">
+                  <svg viewBox="0 0 24 24" fill="none" width="24" height="24"><rect x="3" y="3" width="18" height="18" rx="3" stroke="rgba(107,45,139,0.5)" stroke-width="1.5"/><path d="M3 15l5-5 4 4 3-3 6 6" stroke="rgba(0,169,157,0.6)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8.5" cy="8.5" r="1.5" fill="rgba(107,45,139,0.4)"/></svg>
+                  <span class="branding-zone-hint">Click to upload logo</span>
+                  <span class="branding-zone-sub">PNG or SVG &middot; 200&times;60 recommended</span>
+                </div>
+                <div class="branding-zone-preview" id="logoPreview" style="display:none;">
+                  <img id="logoPreviewImg" src="" alt="Logo" />
+                  <button type="button" class="branding-remove" id="logoRemove">&#x2715;</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Favicon upload -->
+            <div class="branding-upload-block">
+              <span class="settings-label">Favicon</span>
+              <div class="branding-zone branding-zone--favicon" id="faviconZone">
+                <input type="file" id="faviconInput" accept="image/*" style="display:none;" />
+                <div class="branding-zone-inner" id="faviconInner">
+                  <svg viewBox="0 0 24 24" fill="none" width="24" height="24"><rect x="3" y="3" width="18" height="18" rx="3" stroke="rgba(107,45,139,0.5)" stroke-width="1.5"/><path d="M3 15l5-5 4 4 3-3 6 6" stroke="rgba(0,169,157,0.6)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8.5" cy="8.5" r="1.5" fill="rgba(107,45,139,0.4)"/></svg>
+                  <span class="branding-zone-hint">Click to upload favicon</span>
+                  <span class="branding-zone-sub">ICO or PNG &middot; 32&times;32 or 64&times;64</span>
+                </div>
+                <div class="branding-zone-preview branding-zone-preview--sq" id="faviconPreview" style="display:none;">
+                  <img id="faviconPreviewImg" src="" alt="Favicon" />
+                  <button type="button" class="branding-remove" id="faviconRemove">&#x2715;</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Live preview -->
+            <div class="branding-upload-block branding-upload-block--preview">
+              <span class="settings-label">Preview</span>
+              <div class="branding-preview-panel">
+                <div class="bpp-bar">
+                  <div class="bpp-favicon-wrap">
+                    <img id="bppFavicon" src="../logo-cropped.png" alt="" />
+                  </div>
+                  <span class="bpp-tab" id="bppTabTitle">IEEE EMBS Student Chapter</span>
+                </div>
+                <div class="bpp-body">
+                  <img id="bppLogo" src="../logo-cropped.png" alt="Logo preview" />
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="settings-card-footer">
+            <button class="btn-save-settings" id="saveBrandingBtn">
+              <svg viewBox="0 0 24 24" fill="none" width="14" height="14"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z" stroke="currentColor" stroke-width="1.6"/><polyline points="17,21 17,13 7,13 7,21" stroke="currentColor" stroke-width="1.6"/><polyline points="7,3 7,8 15,8" stroke="currentColor" stroke-width="1.6"/></svg>
+              Save Changes
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Danger Zone Card ── -->
+      <div class="panel settings-card danger-card">
+        <div class="panel-header danger-card-header">
+          <div class="panel-header-left">
+            <span class="panel-title danger-title">
+              <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" stroke="#ef4444" stroke-width="1.6" stroke-linejoin="round"/><line x1="12" y1="9" x2="12" y2="13" stroke="#ef4444" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="17" r="0.8" fill="#ef4444"/></svg>
+              Danger Zone
+            </span>
+            <span class="panel-subtitle">Irreversible actions &mdash; proceed with caution</span>
+          </div>
+        </div>
+        <div class="settings-card-body">
+
+          <!-- Logout row -->
+          <div class="danger-row">
+            <div class="danger-row-info">
+              <span class="danger-row-title">Logout</span>
+              <span class="danger-row-desc">End your current admin session and return to the login page</span>
+            </div>
+            <button class="btn-danger btn-danger--outline" id="logoutBtn">
+              <svg viewBox="0 0 24 24" fill="none" width="14" height="14"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><polyline points="16,17 21,12 16,7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><line x1="21" y1="12" x2="9" y2="12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              Logout
+            </button>
+          </div>
+
+          <div class="danger-divider"></div>
+
+          <!-- Clear Cache row -->
+          <div class="danger-row">
+            <div class="danger-row-info">
+              <span class="danger-row-title">Clear Cache</span>
+              <span class="danger-row-desc">Flush all locally cached data. The page will reload automatically</span>
+            </div>
+            <button class="btn-danger btn-danger--outline" id="clearCacheBtn">
+              <svg viewBox="0 0 24 24" fill="none" width="14" height="14"><polyline points="1,4 1,10 7,10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.51 15a9 9 0 1 0 .49-4.95" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              Clear Cache
+            </button>
+          </div>
+
+          <div class="danger-divider"></div>
+
+          <!-- Reset Settings row -->
+          <div class="danger-row">
+            <div class="danger-row-info">
+              <span class="danger-row-title danger-row-title--red">Reset All Settings</span>
+              <span class="danger-row-desc">Restore every setting to its factory default. This cannot be undone</span>
+            </div>
+            <button class="btn-danger btn-danger--solid" id="resetSettingsBtn">
+              <svg viewBox="0 0 24 24" fill="none" width="14" height="14"><polyline points="3,6 5,6 21,6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M10 11v6M14 11v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              Reset Settings
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <div class="toast" id="toast"></div>
+
+  <!-- Reset Confirmation Modal -->
+  <div class="modal-backdrop" id="resetModal" style="display:none;">
+    <div class="modal settings-modal">
+      <div class="settings-modal-icon">
+        <svg viewBox="0 0 24 24" fill="none" width="32" height="32"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" stroke="#ef4444" stroke-width="1.5" stroke-linejoin="round"/><line x1="12" y1="9" x2="12" y2="13" stroke="#ef4444" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="17" r="0.9" fill="#ef4444"/></svg>
+      </div>
+      <h3 class="settings-modal-title">Reset All Settings?</h3>
+      <p class="settings-modal-desc">This will restore every setting to its factory default. All your customisations &mdash; profile, appearance, branding and site info &mdash; will be permanently lost.</p>
+      <div class="settings-modal-actions">
+        <button class="btn-modal-cancel" id="cancelReset">Cancel</button>
+        <button class="btn-modal-danger" id="confirmReset">Yes, Reset Everything</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="settings.js"></script>
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – IEEE EMBS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <div class="logo-wrap">
+        <img src="logo-cropped.png" alt="IEEE EMBS Logo" class="logo-img" />
+      </div>
+      <div class="brand-text">
+        <span class="brand-title">IEEE EMBS</span>
+        <span class="brand-sub">Student Chapter</span>
+      </div>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li class="nav-item-dropdown">
+        <a href="about.html" class="nav-link">About</a>
+        <button class="nav-dropdown-arrow" aria-label="Toggle About menu">
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="nav-dropdown">
+          <li><a href="about.html#about-embs"      class="nav-dropdown-item">About EMBS</a></li>
+          <li><a href="about.html#vision-mission"  class="nav-dropdown-item">Vision &amp; Mission</a></li>
+          <li><a href="about.html#chapter-history" class="nav-dropdown-item">Chapter History</a></li>
+          <li><a href="about.html#core-team"       class="nav-dropdown-item">Core Team</a></li>
+          <li><a href="about.html#join-embs"       class="nav-dropdown-item">Join EMBS</a></li>
+        </ul>
+      </li>
+      <li class="nav-item-dropdown">
+        <a href="activities.html" class="nav-link">Activities</a>
+        <button class="nav-dropdown-arrow" aria-label="Toggle Activities menu">
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="nav-dropdown">
+          <li><a href="events.html"   class="nav-dropdown-item">Events</a></li>
+          <li><a href="projects.html" class="nav-dropdown-item">Projects &amp; Research</a></li>
+          <li><a href="blog.html"     class="nav-dropdown-item">Blog &amp; Articles</a></li>
+          <li><a href="podcast.html"  class="nav-dropdown-item">EMBS Podcast</a></li>
+          <li><a href="gallery.html"  class="nav-dropdown-item">Gallery</a></li>
+        </ul>
+      </li>
+      <li class="nav-item-dropdown">
+        <a href="javascript:void(0)" class="nav-link">Community</a>
+        <button class="nav-dropdown-arrow" aria-label="Toggle Community menu">
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="nav-dropdown">
+          <li><a href="members.html"       class="nav-dropdown-item">Members</a></li>
+          <li><a href="achievements.html"  class="nav-dropdown-item">Achievements</a></li>
+          <li><a href="announcements.html" class="nav-dropdown-item">Announcements</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html" class="nav-link active">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="announce-bar">
+  <div class="announce-label">Updates</div>
+  <div class="announce-track-wrap">
+    <div class="announce-track"></div>
+  </div>
+</div>
+
+<main>
+
+  <section id="contact-hero" class="contact-hero">
+    <div class="contact-hero-inner">
+      <span class="contact-hero-label">Get in Touch</span>
+      <h1 class="contact-hero-heading">Contact Us</h1>
+    </div>
+  </section>
+
+  <section id="contact-layout" class="contact-layout">
+    <div class="contact-layout-inner">
+
+      <div class="contact-col contact-col--form">
+        <h2 class="contact-col-heading">Send a Message</h2>
+        <form class="contact-form" onsubmit="return false;">
+          <div class="contact-field">
+            <label for="contactName" class="contact-label">Full Name</label>
+            <input type="text" id="contactName" name="name" class="contact-input" placeholder="Your full name" />
+          </div>
+          <div class="contact-field">
+            <label for="contactEmail" class="contact-label">Email</label>
+            <input type="email" id="contactEmail" name="email" class="contact-input" placeholder="Your email address" />
+          </div>
+          <div class="contact-field">
+            <label for="contactSubject" class="contact-label">Subject</label>
+            <input type="text" id="contactSubject" name="subject" class="contact-input" placeholder="Subject" />
+          </div>
+          <div class="contact-field">
+            <label for="contactMessage" class="contact-label">Message</label>
+            <textarea id="contactMessage" name="message" class="contact-textarea" placeholder="Your message"></textarea>
+          </div>
+          <button type="submit" class="contact-submit">Send Message &rarr;</button>
+        </form>
+      </div>
+
+      <div class="contact-col contact-col--info">
+        <h2 class="contact-col-heading">Contact Information</h2>
+
+        <ul class="contact-info-list">
+
+          <li class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg>
+            </div>
+            <div class="contact-info-body">
+              <span class="contact-info-label">Address</span>
+              <span class="contact-info-text">KPR Institute of Engineering and Technology, Arasur, Coimbatore &ndash; 641 407, Tamil Nadu, India</span>
+            </div>
+          </li>
+
+          <li class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="16" rx="3" stroke="currentColor" stroke-width="1.5"/><path d="M2 7l10 7 10-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div class="contact-info-body">
+              <span class="contact-info-label">Email</span>
+              <span class="contact-info-text">ieeeembs@kpriet.ac.in</span>
+            </div>
+          </li>
+
+          <li class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M4 20c0-4 3.582-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div class="contact-info-body">
+              <span class="contact-info-label">Faculty In-Charge</span>
+              <span class="contact-info-text">Dr. Allwyn Gnanadas, Associate Professor, Dept. of Biomedical Engineering</span>
+            </div>
+          </li>
+
+          <li class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M8 15c1.5-1 5.5-1 7 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M6.5 11.5c3-1.2 7-1.2 10 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M8 8.5c2-0.8 5-0.8 7 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div class="contact-info-body">
+              <span class="contact-info-label">Podcast Enquiries</span>
+              <span class="contact-info-text">podcast.embs@kpriet.ac.in</span>
+            </div>
+          </li>
+
+        </ul>
+
+        <div class="contact-map-card">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.4985!2d77.0144!3d11.0168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8f7a3b1234567%3A0xabcdef1234567890!2sKPR%20Institute%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+            width="100%"
+            height="260"
+            style="border:0; border-radius: 12px; display: block;"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="KPR Institute of Engineering and Technology location"
+          ></iframe>
+        </div>
+
+        <div class="contact-socials">
+          <a href="#" class="contact-social-btn" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="4" stroke="currentColor" stroke-width="1.5"/><line x1="7" y1="10" x2="7" y2="17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="7" cy="7" r="1" fill="currentColor"/><path d="M11 17v-4a2 2 0 0 1 4 0v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="11" y1="10" x2="11" y2="17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <span>LinkedIn</span>
+          </a>
+          <a href="#" class="contact-social-btn" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+            <span>Instagram</span>
+          </a>
+          <a href="#" class="contact-social-btn" aria-label="YouTube">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="5" width="20" height="14" rx="4" stroke="currentColor" stroke-width="1.5"/><polygon points="10,9 16,12 10,15" fill="currentColor"/></svg>
+            <span>YouTube</span>
+          </a>
+          <a href="#" class="contact-social-btn" aria-label="Twitter / X">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 4l16 16M4 20L20 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <span>Twitter / X</span>
+          </a>
+          <a href="#" class="contact-social-btn" aria-label="Spotify">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M8 15c1.5-1 5.5-1 7 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M6.5 11.5c3-1.2 7-1.2 10 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M8 8.5c2-0.8 5-0.8 7 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <span>Spotify</span>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="faq" class="contact-faq">
+    <div class="contact-faq-inner">
+      <h2 class="contact-faq-heading">FAQ</h2>
+
+      <div class="faq-list">
+
+        <details class="faq-item">
+          <summary class="faq-question">How do I become an IEEE EMBS member?</summary>
+          <div class="faq-answer">To join IEEE EMBS, first create an account at <a href="https://www.ieee.org" target="_blank" rel="noopener">ieee.org</a> and register as a student member. Then reach out to us at <a href="mailto:ieeeembs@kpriet.ac.in">ieeeembs@kpriet.ac.in</a> to be added to our chapter. Membership gives you access to IEEE publications, priority event registration, and our chapter community.</div>
+        </details>
+
+        <details class="faq-item" open>
+          <summary class="faq-question">Who can attend EMBS events?</summary>
+          <div class="faq-answer">All students of our college are welcome. Some events are also open to participants from other institutions.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">How do I submit an achievement or blog post?</summary>
+          <div class="faq-answer">Send your achievement details or blog draft to <a href="mailto:ieeeembs@kpriet.ac.in">ieeeembs@kpriet.ac.in</a> with the subject line "Achievement Submission" or "Blog Submission". Our editorial team will review and publish it on the website. We welcome research highlights, event reports, tutorials, and student project write-ups.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">How can I be a guest on the EMBS Podcast?</summary>
+          <div class="faq-answer">We welcome students, faculty, researchers, and industry professionals as podcast guests. Write to us at <a href="mailto:podcast.embs@kpriet.ac.in">podcast.embs@kpriet.ac.in</a> with a brief introduction and the topic you'd like to discuss. Our podcast team will get back to you to schedule a recording session.</div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-grid">
+      <div class="footer-col footer-brand">
+        <div class="footer-brand-top">
+          <div class="footer-logo-placeholder"></div>
+          <span class="footer-brand-name">IEEE EMBS Chapter</span>
+        </div>
+        <p class="footer-desc">Advancing innovation at the intersection of engineering and medicine. A student-driven community committed to biomedical research, technology, and impact.</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-icon" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="4" stroke="currentColor" stroke-width="1.5"/><line x1="7" y1="10" x2="7" y2="17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="7" cy="7" r="1" fill="currentColor"/><path d="M11 17v-4a2 2 0 0 1 4 0v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="11" y1="10" x2="11" y2="17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+          <a href="#" class="footer-social-icon" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="#" class="footer-social-icon" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="none"><path d="M4 4l16 16M4 20L20 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+          <a href="#" class="footer-social-icon" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="5" width="20" height="14" rx="4" stroke="currentColor" stroke-width="1.5"/><polygon points="10,9 16,12 10,15" fill="currentColor"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About EMBS</a></li>
+          <li><a href="events.html">Activities</a></li>
+          <li><a href="projects.html">Research</a></li>
+          <li><a href="members.html">Members</a></li>
+          <li><a href="podcast.html">Podcast</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Resources</h4>
+        <ul class="footer-links">
+          <li><a href="#">IEEE EMBS Global</a></li>
+          <li><a href="#">Publications</a></li>
+          <li><a href="#">Certificates</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Newsletter</h4>
+        <p class="footer-newsletter-desc">Get updates on events, research, and podcast drops.</p>
+        <form class="footer-newsletter-form" onsubmit="return false;">
+          <input type="email" class="footer-email-input" placeholder="Your email address" />
+          <button type="submit" class="footer-email-btn">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bottom-inner">
+      <span class="footer-copy">&copy; 2025 IEEE EMBS &ndash; KPR Institute of Engineering and Technology Student Chapter. All rights reserved.</span>
+      <span class="footer-credit">Designed by EMBS Web Team</span>
+      <a href="admin/index.html" class="footer-admin-btn">Admin</a>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<script src="navbar.js" defer></script>
+<script src="announceBar.js" defer></script>
+<script src="newsletter.js" defer></script>
+<script src="contactForm.js" defer></script>
+</body>
+</html>
