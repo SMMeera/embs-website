@@ -7,10 +7,12 @@ const podcastSchema = new mongoose.Schema(
     episodeNumber: { type: Number, required: true },
     duration: { type: String, default: '' },
     thumbnail: { type: String, default: '' },
-    audioUrl: { type: String, default: '' },
-    spotifyUrl: { type: String, default: '' },
-    youtubeUrl: { type: String, default: '' },
-    publishedAt: { type: String, default: '' },   // YYYY-MM-DD
+    audioUrl:          { type: String, default: '' },
+    spotifyUrl:        { type: String, default: '' },
+    youtubeUrl:        { type: String, default: '' },
+    guestName:         { type: String, default: '' },
+    guestDesignation:  { type: String, default: '' },
+    publishedAt:       { type: String, default: '' },
   },
   { timestamps: true }
 );

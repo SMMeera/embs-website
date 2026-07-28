@@ -1,3 +1,4 @@
+if (localStorage.getItem('embs_admin_auth') !== 'true') window.location.href = 'index.html';
 'use strict';
 
 const API = 'https://embs-website.onrender.com/api';
@@ -193,3 +194,4 @@ function showToast(msg, type) {
 }
 
 loadAnnouncements();
+
