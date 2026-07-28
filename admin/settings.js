@@ -186,13 +186,50 @@ document.getElementById('saveBrandingBtn').addEventListener('click', () => {
 
 /* ── Appearance Settings ── */
 
+function applyTheme(theme) {
+  const root = document.documentElement;
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const isDark = theme === 'dark' || (theme === 'system' && prefersDark);
+  root.setAttribute('data-theme', isDark ? 'dark' : 'light');
+}
+
+function applyAccent(color) {
+  document.documentElement.style.setProperty('--purple', color);
+}
+
+function loadAppearance() {
+  const saved = JSON.parse(localStorage.getItem('embs_appearance') || '{}');
+  const theme = saved.theme || 'dark';
+  const accent = saved.accent || '#6B2D8B';
+
+  // Apply theme
+  applyTheme(theme);
+  const radio = document.querySelector(`.theme-option input[value="${theme}"]`);
+  if (radio) radio.checked = true;
+
+  // Apply accent
+  applyAccent(accent);
+  document.getElementById('accentColorPicker').value = accent;
+  document.querySelectorAll('.accent-swatch').forEach(s => {
+    s.classList.toggle('accent-swatch--active', s.dataset.color === accent);
+  });
+
+  // Apply toggles
+  if (saved.sidebarCollapsed) sidebar.classList.add('collapsed');
+  if (saved.animations === false) document.documentElement.style.setProperty('--transition', 'none');
+  if (saved.glass === false) document.documentElement.classList.add('no-glass');
+
+  const toggleSidebar = document.getElementById('toggleSidebar');
+  const toggleAnimations = document.getElementById('toggleAnimations');
+  const toggleGlass = document.getElementById('toggleGlass');
+  if (toggleSidebar) toggleSidebar.checked = !!saved.sidebarCollapsed;
+  if (toggleAnimations) toggleAnimations.checked = saved.animations !== false;
+  if (toggleGlass) toggleGlass.checked = saved.glass !== false;
+}
+
 /* Theme radio cards */
 document.querySelectorAll('.theme-option input').forEach(radio => {
-  radio.addEventListener('change', () => {
-    document.querySelectorAll('.theme-option').forEach(opt => {
-      opt.querySelector('.theme-label').style.color = '';
-    });
-  });
+  radio.addEventListener('change', () => applyTheme(radio.value));
 });
 
 /* Accent swatches */
@@ -201,16 +238,26 @@ document.querySelectorAll('.accent-swatch').forEach(swatch => {
     document.querySelectorAll('.accent-swatch').forEach(s => s.classList.remove('accent-swatch--active'));
     swatch.classList.add('accent-swatch--active');
     document.getElementById('accentColorPicker').value = swatch.dataset.color;
+    applyAccent(swatch.dataset.color);
   });
 });
 
 document.getElementById('accentColorPicker').addEventListener('input', (e) => {
   document.querySelectorAll('.accent-swatch').forEach(s => s.classList.remove('accent-swatch--active'));
+  applyAccent(e.target.value);
 });
 
 document.getElementById('saveAppearanceBtn').addEventListener('click', () => {
+  const theme = document.querySelector('.theme-option input:checked')?.value || 'dark';
+  const accent = document.getElementById('accentColorPicker').value;
+  const sidebarCollapsed = document.getElementById('toggleSidebar').checked;
+  const animations = document.getElementById('toggleAnimations').checked;
+  const glass = document.getElementById('toggleGlass').checked;
+  localStorage.setItem('embs_appearance', JSON.stringify({ theme, accent, sidebarCollapsed, animations, glass }));
   showToast('Appearance settings saved!');
 });
+
+loadAppearance();
 
 /* ── Danger Zone ── */
 document.getElementById('logoutBtn').addEventListener('click', () => {
