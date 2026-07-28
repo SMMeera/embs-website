@@ -22,7 +22,16 @@ const contactRoutes      = require('./routes/contactRoutes');
 const app = express();
 
 /* ── Core Middleware ─────────────────────────── */
-app.use(cors({ origin: process.env.CLIENT_URL, credentials: true }));
+app.use(cors({
+  origin: function(origin, callback) {
+    if (!origin || origin.endsWith('.netlify.app') || origin === process.env.CLIENT_URL) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
