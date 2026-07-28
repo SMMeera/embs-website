@@ -5,7 +5,7 @@
 
 // Base URL for all API requests.
 // Change this to your deployed backend URL after deployment.
-const API_BASE = 'https://YOUR_BACKEND_URL/api';
+const API_BASE = 'https://embs-website.onrender.com/api';
 
 /* ── Token helpers ─────────────────────────────── */
 
