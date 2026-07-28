@@ -280,14 +280,23 @@ document.getElementById('savePwdBtn').addEventListener('click', () => {
 
   if (!valid) return;
 
-  /* Dummy success */
-  document.getElementById('currentPwd').value = '';
-  newPwdInput.value = '';
-  document.getElementById('confirmPwd').value = '';
-  strengthWrap.style.display = 'none';
-  ['currentPwd','newPwd','confirmPwd'].forEach(id => {
-    const el = document.getElementById(id);
-    el.classList.remove('input-ok', 'input-error');
-  });
-  showToast('Password updated successfully!');
+  /* Call real API */
+  const token = localStorage.getItem('embs_admin_token');
+  fetch('https://embs-website.onrender.com/api/auth/update-password', {
+    method: 'PATCH',
+    headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
+    body: JSON.stringify({ currentPassword: current, newPassword: newPwd })
+  }).then(async res => {
+    const data = await res.json();
+    if (!res.ok) { showToast(data.message || 'Failed to update password.'); return; }
+    if (data.data?.token) localStorage.setItem('embs_admin_token', data.data.token);
+    document.getElementById('currentPwd').value = '';
+    newPwdInput.value = '';
+    document.getElementById('confirmPwd').value = '';
+    strengthWrap.style.display = 'none';
+    ['currentPwd','newPwd','confirmPwd'].forEach(id => {
+      document.getElementById(id).classList.remove('input-ok', 'input-error');
+    });
+    showToast('Password updated successfully!');
+  }).catch(() => showToast('Network error. Please try again.'));
 });

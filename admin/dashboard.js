@@ -1,3 +1,9 @@
+/* ── Quick Actions ── */
+document.querySelectorAll('.qa-btn').forEach((btn, i) => {
+  const pages = ['events.html', 'achievements.html', 'blog.html', 'podcast.html'];
+  btn.addEventListener('click', () => location.href = pages[i]);
+});
+
 /* ── Auth Guard ── */
 if (localStorage.getItem('embs_admin_auth') !== 'true') {
   window.location.href = 'index.html';
