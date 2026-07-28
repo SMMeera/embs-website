@@ -1,5 +1,5 @@
 (function () {
-  const API_BASE = window.EMBS_API_BASE || 'http://localhost:5000/api';
+  const API_BASE = window.EMBS_API_BASE || 'https://embs-website.onrender.com/api';
 
   async function loadAnnouncements() {
     const track = document.querySelector('.announce-track');
